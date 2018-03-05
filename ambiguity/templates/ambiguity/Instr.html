@@ -1,0 +1,32 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+{% load i18n %}
+
+
+{# ****************************************************************************************************************** #}
+{# *** STYLES *** #}
+{# ****************************************************************************************************************** #}
+{% block styles %}
+    <link href="{% static 'ambiguity/css/custom.css' %}" rel="stylesheet"/>
+{% endblock %}
+
+
+{# ****************************************************************************************************************** #}
+{# *** TITLE *** #}
+{# ****************************************************************************************************************** #}
+{% block title %}
+   Instructions for Phase {{ phase_no }}
+{% endblock %}
+
+{# ****************************************************************************************************************** #}
+{# *** CONTENT *** #}
+{# ****************************************************************************************************************** #}
+{% block content %}
+
+<div>
+    <p>Welcome to Phase {{ phase_no }} of the experiment!</p>
+    <p>The setup is the same as Phase 1 except that the risk is unknown. The payoff table is as follows. Please read the instruction booklet for Phase {{ phase_no }} before you proceed. </p>
+     <p><img src="{% static 'ambiguity/images/adapt.png' %}"  class="img-responsive center-block" /></p>
+    {% next_button %}
+</div>
+{% endblock %}

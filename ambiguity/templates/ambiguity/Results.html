@@ -1,0 +1,35 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+   Results of Phase {{ phase_no }}
+{% endblock %}
+
+{% block content %}
+ <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Round#</th>
+      <th scope="col">Adapt</th>
+      <th scope="col">Flood</th>
+      <th scope="col">Payoff</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for r in result %}
+    <tr>
+      <th scope="row">{{ r.round_no }}</th>
+      <td>{{ r.adapt }}</td>
+      <td>{{ r.flood }}</td>
+      <td>{{ r.payoff }}</td>
+    </tr>
+  {% endfor %}
+    <tr>
+      <th scope="row">Total</th>
+      <td colspan="2"></td>
+      <td>{{ total_payoff }}</td>
+    </tr>
+  </tbody>
+</table>
+{% next_button %}
+{% endblock %}

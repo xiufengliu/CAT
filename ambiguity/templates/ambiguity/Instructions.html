@@ -1,0 +1,39 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+{% load i18n %}
+
+
+{# ****************************************************************************************************************** #}
+{# *** STYLES *** #}
+{# ****************************************************************************************************************** #}
+{% block styles %}
+    <link href="{% static 'ambiguity/css/custom.css' %}" rel="stylesheet"/>
+{% endblock %}
+
+
+{# ****************************************************************************************************************** #}
+{# *** TITLE *** #}
+{# ****************************************************************************************************************** #}
+{% block title %}
+   Instructions for Phase {{ phase_no }}
+{% endblock %}
+
+
+{# ****************************************************************************************************************** #}
+{# *** CONTENT *** #}
+{# ****************************************************************************************************************** #}
+{% block content %}
+
+<div>
+    <p>Welcome to Phase {{ phase_no }} of the experiment!</p>
+    <p>You have completed Phase 1 and will now start Phase 2. The setup is the same; with the exception that now you do
+        not know what your risk is, it could be 1, 5 or 10 percent. </p>
+    <p>
+        <img src="{% static 'ambiguity/images/instr.png' %}" class="img-responsive center-block"/>
+    </p>
+    <p>The rest of the period progresses as in Phase 1. That is, the random event, adaptation decision and payoff stages
+        are the same.</p>
+    <br/>
+    {% next_button %}
+</div>
+{% endblock %}
