@@ -1,0 +1,41 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+{% load i18n %}
+
+
+{# ****************************************************************************************************************** #}
+{# *** STYLES *** #}
+{# ****************************************************************************************************************** #}
+{% block styles %}
+    <link href="{% static 'communication/css/custom.css' %}" rel="stylesheet"/>
+{% endblock %}
+
+
+{# ****************************************************************************************************************** #}
+{# *** TITLE *** #}
+{# ****************************************************************************************************************** #}
+{% block title %}
+   Instructions for Phase {{ phase_no }}
+{% endblock %}
+
+
+{# ****************************************************************************************************************** #}
+{# *** CONTENT *** #}
+{# ****************************************************************************************************************** #}
+{% block content %}
+
+<div>
+    <p>Welcome to Phase {{ phase_no }} of the experiment!</p>
+    <p>The setup is the same as the Phase {{ phase_no_2 }} except you can now use a chat box to communicate with the other group members.</p>
+    <p>The collective and individual payoffs are shown in the following tables, respectively.</p>
+    <p> Please read the instruction booklet for Phase {{ phase_no }} before you proceed.</p>
+     <p> Please wait for all to have communicated, before making a decision.</p>
+    <p>
+        <img src="{% static 'communication/images/earninfo.png' %}" width="560px" class="img-responsive center-block"/>
+    </p>
+
+    <br/>
+    {% next_button %}
+
+</div>
+{% endblock %}

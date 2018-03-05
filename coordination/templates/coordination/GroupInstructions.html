@@ -1,0 +1,52 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+{% load i18n %}
+
+
+{# ****************************************************************************************************************** #}
+{# *** STYLES *** #}
+{# ****************************************************************************************************************** #}
+{% block styles %}
+    <link href="{% static 'coordination/css/custom.css' %}" rel="stylesheet"/>
+{% endblock %}
+
+
+{# ****************************************************************************************************************** #}
+{# *** TITLE *** #}
+{# ****************************************************************************************************************** #}
+{% block title %}
+    Instructions for Phase {{ phase_no }}
+{% endblock %}
+
+
+{# ****************************************************************************************************************** #}
+{# *** CONTENT *** #}
+{# ****************************************************************************************************************** #}
+{% block content %}
+
+<div>
+    <p>Welcome to Phase 5 of the experiment!</p>
+    <p>You have completed Phase 4 and will now start Phase 5. The setup is the same, with the exception that now you will be in groups of three. Within your group you can see each other’s risk. You will vote on whether you wish to collaborate in adaptation or not. If the group decision is to collaborate, you may incur a different adaptation cost than in Phase 1. If the decision is not to collaborate, you make your individual adaptation choice as in Phase 1. </p>
+    <p>
+        <img src="{% static 'coordination/images/instr.png' %}" class="img-responsive center-block"/>
+    </p>
+    <h4><img src="{% static 'coordination/images/home.png' %}"/>Group risk</h4>
+    <p>At the beginning of each period, you are informed of your individual risk. You are also informed of the risk incurred by the other group members. This may be 1, 5 or 10 percent, depending on how vulnerable each individual home is to climate change.</p>
+    <p>
+        <img src="{% static 'coordination/images/riskinfo.png' %}" class="img-responsive center-block"/>
+    </p>
+    <h4><img src="{% static 'coordination/images/umbr1.png' %}"/>Vote and group adaptation</h4>
+    <p>You and two other home owners can now vote on whether you would like to collaborate in taking an adaptation measure. If all three vote for collaborative adaptation, then you take adaptive measures in the current period. The cost of collaborative adaptation is 100 tokens for each group member, regardless of whether a storm surge takes place or not. </p>
+    <p>
+        <img src="{% static 'coordination/images/earninfo.png' %}" class="img-responsive center-block"/>
+    </p>
+
+    <h4><img src="{% static 'coordination/images/umbr2.png' %}"/>Individual adaptation decision</h4>
+    <p>If the result of the vote is no collaboration, you can still decide whether you would like to take adaptation measures on your own. Then, it is as in Phase 1 and 2. </p>
+    <p>
+        <img src="{% static 'coordination/images/payinfo.png' %}" class="img-responsive center-block"/>
+    </p>
+    <br/>
+    {% next_button %}
+</div>
+{% endblock %}

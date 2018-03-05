@@ -1,0 +1,39 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+{% load i18n %}
+
+
+{# ****************************************************************************************************************** #}
+{# *** STYLES *** #}
+{# ****************************************************************************************************************** #}
+{% block styles %}
+    <link href="{% static 'coordination_amb/css/custom.css' %}" rel="stylesheet"/>
+{% endblock %}
+
+
+{# ****************************************************************************************************************** #}
+{# *** TITLE *** #}
+{# ****************************************************************************************************************** #}
+{% block title %}
+  Instructions for Phase {{ phase_no }}
+{% endblock %}
+
+
+{# ****************************************************************************************************************** #}
+{# *** CONTENT *** #}
+{# ****************************************************************************************************************** #}
+{% block content %}
+
+<div>
+    <p>Welcome to Phase {{ phase_no }} of the experiment!</p>
+    <p>The setup and payoff are the same as the previous phase except that the risk is unknown. The collective and individual payoffs are shown in the following tables, respectively.</p>
+    <p>Please read the instruction booklet for Phase {{ phase_no }} before you proceed.</p>
+        <p>
+            <img src="{% static 'coordination_amb/images/earninfo.png' %}" width="560px" class="img-responsive center-block"/>
+
+    </p>
+    <br/>
+    {% next_button %}
+
+</div>
+{% endblock %}

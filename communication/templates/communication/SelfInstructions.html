@@ -1,0 +1,15 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+  Voting results of  Phase {{ phase_no }}
+{% endblock %}
+
+{% block content %}
+<p> Your group has decided not to adapt collectively. You can now choose individually whether you would like to
+        adapt or not. Note that the individual choice is independent of the group choice. The cost of adaptation is {{ cost_adapt }},
+        and your risk may differ from what was announced in the group choice. </p>
+
+
+    {% next_button %}
+{% endblock %}

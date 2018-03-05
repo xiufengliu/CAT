@@ -1,0 +1,60 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+{% load i18n %}
+
+
+{# ****************************************************************************************************************** #}
+{# *** STYLES *** #}
+{# ****************************************************************************************************************** #}
+{% block styles %}
+    <link href="{% static 'control/css/custom.css' %}" rel="stylesheet"/>
+{% endblock %}
+
+{# ****************************************************************************************************************** #}
+{# *** TITLE *** #}
+{# ****************************************************************************************************************** #}
+{% block title %}
+ Instruction of Phase {{ phase_no }}
+{% endblock %}
+
+{# ****************************************************************************************************************** #}
+{# *** CONTENT *** #}
+{# ****************************************************************************************************************** #}
+{% block content %}
+    <div>
+            <p>Welcome to Phase {{ phase_no }} of the experiment!</p>
+            <p>The experiment has 7 phases. Each phase consists of a sequence of events that make up a period. There are 3 periods in each phase. A period in Phase 1 comprises the following events: information on individual risk, decision on whether to invest in adaptation measures, a random event with the possibility that a flood may take place and feedback on the results of the period.</p>
+            <p><img src="{% static 'control/images/instruction.png' %}"  class="img-responsive center-block" /></p>
+        <br/>
+    </div>
+
+    <div>
+        <h4><img src="{% static 'control/images/home.png' %}"/>Individual risk</h4>
+        <p> At the beginning of each period, you are informed of your individual risk. This may be 1, 5 or 10 percent, depending on how vulnerable your home is to climate change.</p>
+        <p><img src="{% static 'control/images/riskinfo.png' %}"  class="img-responsive center-block" /></p>
+        <br/>
+    </div>
+  <div>
+        <h4><img src="{% static 'control/images/game.png' %}"/>Random Event</h4>
+        <p> You have 500 tokens. If your house is flooded you lose 450 tokens, if it is not flooded you keep your 500 tokens. In each period your risk of losing may vary from 1 percent to 10 percent. For example, imagine that your risk is 5 percent. That is the risk you run of having your house flooded by a storm. You will have to click on a matrix with 100 squares that will reveal 100 houses when you click on it, 5 will be flooded and 95 will be intact. The square you randomly click on will determine the random event for the period. If it is a flooded house, you lose 450 tokens and if it is an intact house nothing happens.</p>
+        <p><img src="{% static 'control/images/gamelarge.png' %}"  class="img-responsive center-block" /></p>
+        <br/>
+  </div>
+    <div>
+        <h4><img src="{% static 'control/images/umbra.png' %}"/>Adaptation decision</h4>
+        <p> Prior to the random event, you can decide whether you would like to take some adaptation measures. If you decide adapt, you pay 200 tokens to cover the cost, and thereby you avoid any risk of a loss.</p>
+        <p>If you choose not to take adaptation measures your earning will depend on the risk of clicking on a flooded house. For example, if your risk is 5 percent, then in 5 of every 100 cases the house is flooded, and you incur a loss, your earning is 50 tokens. In 95 out of 100 cases the house is intact, and your income is 500 tokens.</p>
+        <p>If you do take adaptation measures your earning will be 300 tokens, regardless of which square is clicked.</p>
+        <p><img src="{% static 'control/images/adapt.png' %}"  class="img-responsive center-block" /></p>
+        <br/>
+  </div>
+
+    <div>
+        <h4><img src="{% static 'control/images/result.png' %}"/>Result</h4>
+        <p>At the end of each period you are informed of the result of the random event, and your payoff for the particular period.</p>
+        <br/>
+  </div>
+
+
+ {% next_button %}
+{% endblock %}

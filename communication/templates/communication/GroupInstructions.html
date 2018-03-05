@@ -1,0 +1,39 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+{% load i18n %}
+
+
+{# ****************************************************************************************************************** #}
+{# *** STYLES *** #}
+{# ****************************************************************************************************************** #}
+{% block styles %}
+    <link href="{% static 'communication/css/custom.css' %}" rel="stylesheet"/>
+{% endblock %}
+
+
+{# ****************************************************************************************************************** #}
+{# *** TITLE *** #}
+{# ****************************************************************************************************************** #}
+{% block title %}
+   Instructions for Phase {{ phase_no }}
+{% endblock %}
+
+
+{# ****************************************************************************************************************** #}
+{# *** CONTENT *** #}
+{# ****************************************************************************************************************** #}
+{% block content %}
+
+<div>
+    <p>Welcome to Phase 7 of the experiment!</p>
+    <p>You have completed Phase 6 and will now start Phase 7. The setup is the same as in the Phase 5 with the exception that now you are able to use a chat box to communicate with the two other group members.</p>
+    <p>
+        <img src="{% static 'communication/images/instr.png' %}" class="img-responsive center-block"/>
+    </p>
+    <p>The rest of the period progresses as in Phase 5. That is, the random event, adaptation decisions and payoff stages are the same.</p>
+
+    <br/>
+    {% next_button %}
+
+</div>
+{% endblock %}

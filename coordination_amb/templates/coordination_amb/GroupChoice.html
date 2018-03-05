@@ -1,0 +1,13 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Phase {{ phase_no }}
+{% endblock %}
+
+{% block content %}
+<p>The risk of your home being flooded is unknown at this period. It might be 1, 5 or 10 percent. The risks of the other two group members are also unknown.</p>
+
+{% formfield player.group_adapt with label='Do you want to adapt collectively?' %}
+    {% next_button %}
+{% endblock %}

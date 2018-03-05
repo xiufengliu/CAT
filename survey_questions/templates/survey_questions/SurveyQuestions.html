@@ -1,0 +1,36 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Post Questionnaire Survey
+{% endblock %}
+
+{% block content %}
+In the following, you will be asked a few questions about yourself, your preferences and other background questions. Your answers are important for our interpretation of the experiment results. We would like you to be as precise as possible when you answer these questions.
+<hr>
+<h3>Part I</h3>
+{% formfield player.gender %}
+{% formfield player.age %}
+{% formfield player.nationality %}
+{% formfield player.live_status %}
+{% formfield player.monthly_income %}
+<hr>
+<h3>Part II</h3>
+
+{% formfield player.street_name %}
+{% formfield player.post_code %}
+{% formfield player.property_ownership %}
+{% formfield player.flood_risk %}
+{% formfield player.apartment_type %}
+<hr>
+<h3>Part III</h3>
+{% formfield player.risk_opt_preference %}
+{% formfield player.frame_loss_aversion %}
+<hr>
+<h3>Part IV</h3>
+{% formfield player.q1 %}
+{% formfield player.q2 %}
+{% formfield player.q3 %}
+{% formfield player.q4 %}
+{% next_button %}
+{% endblock %}

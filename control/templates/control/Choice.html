@@ -1,0 +1,13 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Phase {{ phase_no }}
+{% endblock %}
+
+{% block content %}
+<p>The risk of your home being flooded is {{ risk }} percent in this period.</p>
+
+{% formfield player.adapt with label='Do you want to adapt?' %}
+    {% next_button %}
+{% endblock %}

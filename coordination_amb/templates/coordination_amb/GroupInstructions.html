@@ -1,0 +1,42 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+{% load i18n %}
+
+
+{# ****************************************************************************************************************** #}
+{# *** STYLES *** #}
+{# ****************************************************************************************************************** #}
+{% block styles %}
+    <link href="{% static 'css/custom.css' %}" rel="stylesheet"/>
+{% endblock %}
+
+
+{# ****************************************************************************************************************** #}
+{# *** TITLE *** #}
+{# ****************************************************************************************************************** #}
+{% block title %}
+  Instructions for Phase {{ phase_no }}
+{% endblock %}
+
+
+{# ****************************************************************************************************************** #}
+{# *** CONTENT *** #}
+{# ****************************************************************************************************************** #}
+{% block content %}
+
+<div>
+    <p>Welcome to Phase {{ phase_no }} of the experiment!</p>
+    <p>You have completed Phase 5 and will now start Phase 6. The setup is the same as in the previous phase with the
+        exception that now you do not know what your risk or the risk faced by the other group members is. All you know
+        is that it could be 1, 5 or 10 percent.</p>
+    <p>
+        <img src="{% static 'coordination_amb/images/instr.png' %}" class="img-responsive center-block"/>
+    </p>
+    <p>The rest of the period progresses as in Phase 5. That is, the random event, adaptation decisions and payoff
+        stages are the same.</p>
+
+    <br/>
+    {% next_button %}
+
+</div>
+{% endblock %}

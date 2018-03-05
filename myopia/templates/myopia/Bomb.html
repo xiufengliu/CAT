@@ -1,0 +1,128 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+{% load i18n %}
+
+
+{# ****************************************************************************************************************** #}
+{# *** STYLES *** #}
+{# ****************************************************************************************************************** #}
+{% block styles %}
+    <link href="{% static 'myopia/css/bret.css' %}" rel="stylesheet"/>
+    <style type="text/css">.ng-cloak{display:none !important;}</style>
+{% endblock %}
+
+
+{# ****************************************************************************************************************** #}
+{# *** SCRIPTS *** #}
+{# ****************************************************************************************************************** #}
+{% block scripts %}
+    <script src="{% static 'myopia/js/angular.min.js' %}"></script>
+    <script src="{% static 'myopia/js/bret.js' %}"></script>
+    <script>(function(angular){
+        var oVars = {{ otree_vars }};
+        try{
+            angular.module("bombTask")
+            .constant("WIDTH", oVars.box_width)
+            .constant("HEIGHT", oVars.box_height)
+            .constant("NUM_ROWS", oVars.num_rows)
+            .constant("NUM_COLS", oVars.num_cols)
+            .constant("NUM_BOMBS", oVars.num_bombs);
+            
+        } catch(e){ console.error("Could not pass server-side settings to bomb task app!");}
+    })(angular);
+    </script>
+{% endblock %}
+
+
+{# ****************************************************************************************************************** #}
+{# *** TITLE *** #}
+{# ****************************************************************************************************************** #}
+{% block title %}
+    Phase {{ phase_no }}
+{% endblock %}
+
+
+{# ****************************************************************************************************************** #}
+{# *** CONTENT *** #}
+{# ****************************************************************************************************************** #}
+{% block content %}
+<div> In year {{ year_no }}. Please click on a square </div>
+    <div class="panel panel-primary">
+            <div
+                id="bomb-task"
+                class="ng-cloak"
+                data-ng-app="bombTask"
+                data-ng-controller="BombTaskController as bombTaskController">
+
+                <div class="matrix">
+                    <div
+                        class="row"
+                        data-ng-repeat="columns in bombTaskController.matrix">
+                        <div
+                            class="col"
+                            data-ng-repeat="column in columns">
+
+                            <div
+                                class="holder"
+                                data-card="column"
+                                data-card-is-active="column.$$active"
+                                data-card-is-disabled="column.$$disabled"
+                                data-card-on-toggle="bombTaskController.update(column)"
+                                data-ng-class="{
+                                    'resolved':bombTaskController.resolved,
+                                    'bomb':bombTaskController.resolved && bombTaskController.isBomb(column)
+                                }"
+                                data-ng-style="{
+                                    'width':bombTaskController.width,
+                                    'height':bombTaskController.height
+                                }"
+                                data-card-is-clickable="true">
+
+                                <span
+                                    class="front"
+                                    data-ng-style="{
+                                        'width':bombTaskController.width,
+                                        'height':bombTaskController.height
+                                    }">
+                                    <span class="icon glyphicons"></span>
+                                </span>
+                                 <span
+                                    data-ng-class="{
+                                        'bomb':bombTaskController.resolved && bombTaskController.isBomb(column)
+                                        }"
+                                    data-ng-style="{
+                                        'width':bombTaskController.width,
+                                        'height':bombTaskController.height
+                                    }"
+                                    class="back"
+                                    >
+                                    <span class="icon glyphicons glyphicons-home"></span>
+                                    <span class="icon glyphicons glyphicons-flood"></span>
+                                </span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <input type="hidden" name="hit_bomb" id="hit_bomb"  data-ng-value="bombTaskController.hit_bomb"/>
+                 <script id="/card.html" type="text/ng-template">
+                    <a
+                        class="card"
+                        data-ng-transclude=""
+                        href="javascript:void(0)"
+                        data-ng-click="cardController.toggle()"
+                        data-ng-class="{
+                                        'active':cardController.isActive,
+                                        'clickable':cardController.isClickable
+                                        }"
+                        >
+                    </a>
+                </script>
+
+            </div>
+
+
+
+    </div>
+  {% next_button %}
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+{% load i18n %}
+
+
+{# ****************************************************************************************************************** #}
+{# *** STYLES *** #}
+{# ****************************************************************************************************************** #}
+{% block styles %}
+    <link href="{% static 'myopia/css/custom.css' %}" rel="stylesheet"/>
+{% endblock %}
+
+
+{# ****************************************************************************************************************** #}
+{# *** TITLE *** #}
+{# ****************************************************************************************************************** #}
+{% block title %}
+   Instructions for Phase {{ phase_no }}
+{% endblock %}
+
+
+{# ****************************************************************************************************************** #}
+{# *** CONTENT *** #}
+{# ****************************************************************************************************************** #}
+{% block content %}
+<div>
+    <p>Welcome to Phase 4 of the experiment!</p>
+    <p>You have completed Phase 3 and will now start Phase 4. The setup is the same as in phase 1, with the exception that now your adaptation decision is binding for ten rounds, where the risk is constant throughout, and you are not allowed to revisit your choice between each click. </p>
+    <p>
+        <img src="{% static 'myopia/images/instr.png' %}" class="img-responsive center-block"/>
+    </p>
+    <br/>
+    {% next_button %}
+</div>
+{% endblock %}

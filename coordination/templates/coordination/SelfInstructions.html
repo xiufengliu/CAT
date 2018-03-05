@@ -1,0 +1,12 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+  Voting results of Phase {{ phase_no }}
+{% endblock %}
+
+{% block content %}
+<p> Your group has decided not to adapt collectively. Now you can choose to adapt individually. Note that the individual choice is independent of the group choice. The cost of individual adaptation is 200 tokens,
+        and the risk may be different to the risk announced in the group choice. </p>
+    {% next_button %}
+{% endblock %}

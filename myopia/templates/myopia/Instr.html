@@ -1,0 +1,35 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+{% load i18n %}
+
+
+{# ****************************************************************************************************************** #}
+{# *** STYLES *** #}
+{# ****************************************************************************************************************** #}
+{% block styles %}
+    <link href="{% static 'myopia/css/custom.css' %}" rel="stylesheet"/>
+{% endblock %}
+
+
+{# ****************************************************************************************************************** #}
+{# *** TITLE *** #}
+{# ****************************************************************************************************************** #}
+{% block title %}
+   Instructions for Phase {{ phase_no }}
+{% endblock %}
+
+
+{# ****************************************************************************************************************** #}
+{# *** CONTENT *** #}
+{# ****************************************************************************************************************** #}
+{% block content %}
+<div>
+    <p>Welcome to Phase {{ phase_no }} of the experiment!</p>
+   <p>The setup is the same as in Phase 1 except that your adaptation decision is binding for the next {{ n_year }} years. The risks is constant throughout the years. The table shows the payoff for each year. Please read the instruction booklet for Phase {{ phase_no }} before you proceed.</p>
+    <p>
+        <img src="{% static 'myopia/images/adapt.png' %}" class="img-responsive center-block"/>
+    </p>
+    <br/>
+    {% next_button %}
+</div>
+{% endblock %}

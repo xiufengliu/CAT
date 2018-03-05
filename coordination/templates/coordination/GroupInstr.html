@@ -1,0 +1,41 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+{% load i18n %}
+
+
+{# ****************************************************************************************************************** #}
+{# *** STYLES *** #}
+{# ****************************************************************************************************************** #}
+{% block styles %}
+    <link href="{% static 'coordination/css/custom.css' %}" rel="stylesheet"/>
+{% endblock %}
+
+
+{# ****************************************************************************************************************** #}
+{# *** TITLE *** #}
+{# ****************************************************************************************************************** #}
+{% block title %}
+    Instructions for Phase {{ phase_no }}
+{% endblock %}
+
+
+{# ****************************************************************************************************************** #}
+{# *** CONTENT *** #}
+{# ****************************************************************************************************************** #}
+{% block content %}
+
+<div>
+    <p>Welcome to Phase {{ phase_no }} of the experiment!</p>
+    <p>The setup is the same as Phase 1 except that now you will be in a group of three members. Within your group you can see each other's risk and vote to adapt collectively or not. The following tables show the earning of collective and individual adaptation, respectively.
+    </p>
+
+    <p>Collaborative adaptation takes effect only when all group members vote for it. The collaborative adaptation cost is 100 tokens for each member.</p>
+
+    <p>Individual adaptation takes effect if one of the group member votes for no collective adaptation, then the payoff table is as before. Please read the instruction booklet for Phase {{ phase_no }} before you proceed.</p>
+    <p>
+        <img src="{% static 'coordination/images/earninfo.png' %}" width="560px" class="img-responsive center-block"/>
+    </p>
+    <br/>
+    {% next_button %}
+</div>
+{% endblock %}
