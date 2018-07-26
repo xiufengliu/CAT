@@ -14,7 +14,7 @@ The installaton procudure includes the followings:
 
 
 ### 3. Online demo
-**TODO**: Setting up in google cloud 
+[Demo](http://35.226.4.63:8000/demo/ "Demo")
 
 ### 4. Experimental manual
 - The user manual can be found [here](https://github.com/xiufengliu/CAT/blob/master/doc/Script.pdf "here")
