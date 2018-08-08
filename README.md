@@ -14,7 +14,7 @@ The installaton procudure includes the followings:
 
 
 ### 3. Online demo
-[Demo](http://35.226.61.108:8000/demo/ "Demo")
+[Demo](http://35.225.185.210:8000/demo/ "Demo")
 
 ### 4. Experimental manual
 - The user manual can be found [here](https://github.com/xiufengliu/CAT/blob/master/doc/Script.pdf "here")
