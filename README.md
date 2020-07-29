@@ -20,4 +20,6 @@ The installation procudure includes the followings:
 - The user manual can be found [here](https://github.com/xiufengliu/CAT/blob/master/doc/Script.pdf "here")
 - The pilot experimental instruction can be found at [here](https://github.com/xiufengliu/CAT/blob/master/doc/Instructions.pdf "here")
 
+### 5. Publication
+- von Bülow, C. W., & Liu, X. (2020). Ready-Made oTree Applications for the Study of Climate Change Adaptation Behavior. Journal of Behavioral and Experimental Economics, 101590.  [PDF](https://www.sciencedirect.com/science/article/pii/S2214804320301257?dgcid=author "PDF")
 
