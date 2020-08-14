@@ -6,7 +6,7 @@
 
 ### 2. Installation
 The installation procudure includes the followings:
-- Install the [ oTree ](http- s://www.otree.org/ " oTree "). The guidline of installation of oTree can be found at [here](http://otree.readthedocs.io/en/latest/ "here"). 
+- Install the [ oTree 1.3.9 ](http- s://www.otree.org/ " oTree "). The guidline of installation of oTree can be found at [here](http://otree.readthedocs.io/en/latest/ "here"). 
 - Copy all the apps of CAT to the directory of oTree. 
 - Configure database connection, user account, and sessions for experiments in the file *setting.py *
 - Since a speical *glyphicons* icon (flooded home) is used, the [glyph patch](https://github.com/xiufengliu/CAT/raw/master/glphy.tar.gz "glyph patch") should be extracted to the otree core static directory, e.g., for oTree in python3.5, 
