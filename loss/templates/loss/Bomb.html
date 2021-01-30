@@ -1,6 +1,6 @@
-{% extends "global/Base.html" %}
-{% load staticfiles otree_tags %}
-{% load i18n %}
+{% extends "global/Page.html" %}
+{% load otree %}
+
 
 
 {# ****************************************************************************************************************** #}
@@ -56,7 +56,7 @@
 
                 <div class="matrix">
                     <div
-                        class="row"
+
                         data-ng-repeat="columns in bombTaskController.matrix">
                         <div
                             class="col"

@@ -16,6 +16,7 @@
 #bomb-task .matrix{
 	margin: 0px;
 	text-align: center;
+	display: table;
 }
 
 /** ROWS */

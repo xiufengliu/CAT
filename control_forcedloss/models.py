@@ -4,7 +4,7 @@ from otree.api import (
     Currency as c, currency_range,
     BaseConstants)
 import numpy as np
-import random
+import random, time
 from .config import Constants
 
 author = 'Xiufeng Liu (xiuli@dtu.dk)'
@@ -18,11 +18,14 @@ doc = """ N/A """
 # *** CLASS SUBSESSION *** #
 # ******************************************************************************************************************** #
 class Subsession(BaseSubsession):
-    def before_session_starts(self):
-        self.session.vars['control_risks'] = [np.random.choice(Constants.risks, Constants.players_per_group) for
+    session_name = models.StringField()
+    def creating_session(self):
+        rnd = random.Random(time.time_ns())
+        self.session.vars['control_risks'] = [rnd.choices(Constants.risks, k=Constants.players_per_group) for
                                                      i in range(Constants.num_rounds)]
         self.session.vars['must_hit'] = [random.randint(1, Constants.players_per_group) for
                                          i in range(Constants.num_rounds)]
+        self.session_name = self.session.config['name']
 
 # ******************************************************************************************************************** #
 # *** CLASS GROUP *** #

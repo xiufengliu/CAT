@@ -3,7 +3,7 @@ from otree.api import (
     models, widgets, BaseSubsession, BaseGroup, BasePlayer,
     Currency as c, currency_range,
     BaseConstants)
-import numpy as np
+import random
 import time
 from .config import Constants
 
@@ -18,10 +18,12 @@ doc = """ N/A """
 # *** CLASS SUBSESSION *** #
 # ******************************************************************************************************************** #
 class Subsession(BaseSubsession):
-    def before_session_starts(self):
-        np.random.seed(int(time.time()))
-        risk = np.random.choice(Constants.risks, Constants.players_per_group)
+    session_name = models.StringField()
+    def creating_session(self):
+        rnd = random.Random(time.time_ns())
+        risk = rnd.choices(Constants.risks, k=Constants.players_per_group)
         self.session.vars['myopia_risks'] = [risk]*Constants.num_rounds
+        self.session_name = self.session.config['name']
 
 # ******************************************************************************************************************** #
 # *** CLASS GROUP *** #

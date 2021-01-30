@@ -6,11 +6,11 @@
 
 ### 2. Installation
 The installation procudure includes the followings:
-- Install the [ oTree 1.3.9 ](http- s://www.otree.org/ " oTree "). The guidline of installation of oTree can be found at [here](http://otree.readthedocs.io/en/latest/ "here"). 
+- Install the [ oTree 3.3.11 ](http- s://www.otree.org/ " oTree "). The guidline of installation of oTree can be found at [here](http://otree.readthedocs.io/en/latest/ "here"). 
 - Copy all the apps of CAT to the directory of oTree. 
 - Configure database connection, user account, and sessions for experiments in the file *setting.py *
 - Since a speical *glyphicons* icon (flooded home) is used, the [glyph patch](https://github.com/xiufengliu/CAT/raw/master/glphy.tar.gz "glyph patch") should be extracted to the otree core static directory, e.g., for oTree in python3.5, 
-` /usr/local/lib/python3.5/dist-packages/otree/static` , then add the line `<link rel="stylesheet" href="{% static 'glyph/css/glyphicons.css' %}">` to the file `/usr/local/lib/python3.5/dist-packages/otree/templates/otree/includes/InternalStyles.html`
+` /usr/local/lib/python3.7/dist-packages/otree/static` , then add the line `<link rel="stylesheet" href="{% static 'glyph/css/glyphicons.css' %}">` to the file `/usr/local/lib/python3.7/dist-packages/otree/templates/otree/Base.html`
 
 
 ### 3. Online demo
@@ -22,4 +22,3 @@ The installation procudure includes the followings:
 
 ### 5. Publication
 - von Bülow, C. W., & Liu, X. (2020). Ready-Made oTree Applications for the Study of Climate Change Adaptation Behavior. Journal of Behavioral and Experimental Economics, 101590.  [[PDF]](https://www.sciencedirect.com/science/article/pii/S2214804320301257?dgcid=author "PDF")
-
