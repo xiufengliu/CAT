@@ -5,6 +5,9 @@ from otree.api import (
     BaseConstants)
 import numpy as np
 import random, time
+import datetime as dt
+from datetime import datetime
+
 from .config import Constants
 
 author = 'Xiufeng Liu (xiuli@dtu.dk)'
@@ -19,6 +22,7 @@ doc = """ N/A """
 # ******************************************************************************************************************** #
 class Subsession(BaseSubsession):
     session_name = models.StringField()
+    exec_time = models.StringField()
     def creating_session(self):
         rnd = random.Random(time.time_ns())
         self.session.vars['control_risks'] = [rnd.choices(Constants.risks, k=Constants.players_per_group) for
@@ -26,6 +30,7 @@ class Subsession(BaseSubsession):
         self.session.vars['must_hit'] = [random.randint(1, Constants.players_per_group) for
                                          i in range(Constants.num_rounds)]
         self.session_name = self.session.config['name']
+        self.exec_time = datetime.now(dt.timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
 
 # ******************************************************************************************************************** #
 # *** CLASS GROUP *** #

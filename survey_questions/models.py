@@ -5,6 +5,8 @@ from otree.api import (
     BaseConstants)
 import numpy as np
 import time
+import datetime as dt
+from datetime import datetime
 
 
 from .config import Constants
@@ -20,8 +22,11 @@ doc = """ N/A """
 # *** CLASS SUBSESSION *** #
 # ******************************************************************************************************************** #
 class Subsession(BaseSubsession):
-    pass
-
+    session_name = models.StringField()
+    exec_time = models.StringField()
+    def creating_session(self):
+        self.session_name = self.session.config['name']
+        self.exec_time = datetime.now(dt.timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
 
 
 
