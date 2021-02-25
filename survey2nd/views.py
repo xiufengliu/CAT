@@ -23,7 +23,7 @@ class SurveyQuestions(Page):
         's19_is_exposed_climate_event',
         's110_desc_climate_event',
         's111_likelihood_climent_event',
-        's112degree_or_disagree',
+        's112_degree_or_disagree',
         's21_prefered_option',
         's22_program_ab',
         's23_program_cd',
