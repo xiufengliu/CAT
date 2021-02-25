@@ -1,0 +1,60 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+
+{% block title %}
+    Post Questionnaire Survey
+{% endblock %}
+
+{% block content %}
+I det følgende vil du blive stillet nogle få spørgsmål omkring dig selv, dine præferencer og andre baggrundsspørgsmål. Dine svar er vigtige for vores analyse af spillets resultater. Derfor beder vi dig svare så præcist så muligt på spørgsmålene. Dine svar vil være fuldstændigt fortrolige.
+<hr>
+<h3>1. SOCIOECONOMIC, GEOGRAPHIC AND VULNERABILITY FACTORS (DK)</h3>
+{% formfield player.s11_gender %}
+{% formfield player.s12_age %}
+{% formfield player.s13_live_status %}
+{% formfield player.s14_monthly_income %}
+{% formfield player.s15_municipality %}
+{% formfield player.s16_property_ownership %}
+{% formfield player.s17_is_flood_risk_zone %}
+{% formfield player.s18_house_type %}
+{% formfield player.s19_is_exposed_climate_event %}
+{% formfield player.s110_desc_climate_event %}
+{% formfield player.s111_likelihood_climent_event %}
+{% formfield player.s112_degree_or_disagree %}
+
+<hr>
+<h3>2. ECONOMIC THEORY (DK)</h3>
+{% formfield player.s21_prefered_option %}
+Forestil dig, at regeringen forbereder sig på en klimakatastrofe, hvor 600 mennesker forventes at omkomme. To alternative programmer til at mindske katastrofen er blevet foreslået. Antag, at det nøjagtige videnskabelige skøn over konsekvenserne af programmerne er som følger:
+{% formfield player.s22_program_ab %}
+{% formfield player.s23_program_cd %}
+
+<hr>
+<h3>SENSE OF COHERENCE SOC (DK)</h3>
+Angiv for hvert udsagn, hvorvidt du er enig i, at de passer på dig eller ej.
+{% formfield player.s31_findsolution %}
+{% formfield player.s32_findvalue %}
+{% formfield player.s33_understand_issue %}
+
+
+<h3>COMMUNITY SENSE OF COHERENCE SOC (DK)</h3>
+<hr>
+
+<h3>DOMAIN-SPECIFIC RISK-TAKING SCALE DOSPERT (DK)</h3>
+<hr>
+
+<h3>FLOOD DOMAIN-SPECIFIC RISK-TAKING SCALE F-DOSPERT</h3>
+<hr>
+
+<h3>PERSONALITY INVENTORY HEXACO - BHI (DK)</h3>
+<hr>
+
+<h3>PERSONALITY INVENTORY HEXACO - BHI (DK)</h3>
+
+<hr>
+
+
+
+{% next_button %}
+{% endblock %}

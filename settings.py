@@ -18,7 +18,7 @@ SESSION_CONFIGS = [
             'coordination_amb',  # Phase 6
             'communication',  # Phase 7
             'payment_info',  # Payment summary
-            'survey_questions'  # survey quesitons
+            'survey1st'  # survey quesitons
         ],
     ),
  dict(
@@ -35,7 +35,7 @@ SESSION_CONFIGS = [
             'communication',  # Phase 7
             'myopia',
             'payment_info',  # Payment summary
-            'survey_questions'  # survey quesitons
+            'survey1st'  # survey quesitons
         ],
 ),
 dict(
@@ -51,7 +51,16 @@ dict(
             'coordination_amb',  # Phase 6
             'communication',  # Phase 7
             'payment_info',  # Payment summary
-            'survey_questions'  # survey quesitons
+            'survey1st'  # survey quesitons
+        ],
+),
+dict(
+        name = "CATE_Apps",
+        display_name = "CAT+E Apps",
+        real_world_currency_per_point = 0.0125,
+        num_demo_participants = 3,
+        app_sequence = [
+            'survey2nd'  # survey quesitons
         ],
 )
 ]
