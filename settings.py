@@ -58,7 +58,7 @@ dict(
         name = "CATE_Apps",
         display_name = "CAT+E Apps",
         real_world_currency_per_point = 0.0125,
-        num_demo_participants = 3,
+        num_demo_participants = 1,
         app_sequence = [
             'survey2nd'  # survey quesitons
         ],
