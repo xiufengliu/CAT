@@ -119,7 +119,7 @@ class Player(BasePlayer):
         widget=widgets.RadioSelect()
     )
 
-    s110_desc_climate_event = models.CharField(verbose_name='hvis ja, uddyb venligst:')
+    s110_desc_climate_event = models.CharField(verbose_name='hvis ja, uddyb venligst:', blank=True, default='')
 
     s111_likelihood_climent_event = models.CharField(
         choices=[['highly unlikely', 'højst usandsynligt'],

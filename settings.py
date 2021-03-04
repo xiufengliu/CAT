@@ -60,7 +60,7 @@ dict(
         real_world_currency_per_point = 0.0125,
         num_demo_participants = 1,
         app_sequence = [
-            'survey2nd'  # survey quesitons
+           'welcomedk', 'survey2nd'  # survey quesitons
         ],
 )
 ]
@@ -71,7 +71,9 @@ dict(
 # e.g. self.session.config['participation_fee']
 
 SESSION_CONFIG_DEFAULTS = dict(
-    real_world_currency_per_point=1.00, participation_fee=0.00, doc=""
+    real_world_currency_per_point=1.00,
+    participation_fee=0.00,
+    doc=""
 )
 
 # ISO-639 code

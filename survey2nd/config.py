@@ -7,7 +7,7 @@ from otree.api import BaseConstants, Currency
 class Constants(BaseConstants):
 
     name_in_url = 'survey2nd'
-    players_per_group = 3
+    players_per_group = None
 
     num_rows = 10
     num_cols = 10
