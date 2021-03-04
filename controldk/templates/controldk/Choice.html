@@ -7,8 +7,8 @@
 {% endblock %}
 
 {% block content %}
-<p>The risk of your home being flooded is {{ risk }} % in this period.</p>
+<p>Risikoen for, at dit hjem bliver oversvømmet, er {{ risk }}% i denne periode.</p>
 
-{% formfield player.adapt with label='Do you want to adapt?' %}
+{% formfield player.adapt with label='Vil du tilpasse dig?' %}
     {% next_button %}
 {% endblock %}
