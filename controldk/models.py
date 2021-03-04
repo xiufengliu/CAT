@@ -42,8 +42,8 @@ class Player(BasePlayer):
     hit_bomb = models.PositiveIntegerField()
 
     adapt = models.PositiveIntegerField(
-        choices=[[1, 'Yes'],
-                 [0, 'No']
+        choices=[[1, 'Ja'],
+                 [0, 'Nej']
                  ],
         widget=widgets.RadioSelect()
     )
