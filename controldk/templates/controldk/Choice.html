@@ -1,0 +1,14 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+
+{% block title %}
+    Runde {{ round_no }}
+{% endblock %}
+
+{% block content %}
+<p>The risk of your home being flooded is {{ risk }} % in this period.</p>
+
+{% formfield player.adapt with label='Do you want to adapt?' %}
+    {% next_button %}
+{% endblock %}

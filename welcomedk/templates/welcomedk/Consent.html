@@ -1,0 +1,39 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+
+{% block title %}
+    Samtykkeerklæring til spil og spørgeskemaer
+{% endblock %}
+
+{% block content %}
+Undersøgelsen er lavet af DTU i et samarbejde mellem LB Forsikrings Videncenter og Sektion for Climate Economics and Risk Management. Spillet og spørgeskemaundersøgelsen er vigtige redskaber inden for klima forskning, idet de er med til at skabe en bedre forståelse for, hvordan mennesker træffer beslutninger. Undersøgelsen vil tage ca {{ Constants.min_time }} til
+        {{ Constants.max_time }} min. <br /><br />
+
+    Hvis du vælger at deltage i undersøgelsen, vil du blive bedt om at:
+        <ul>
+
+        <li> Spille et kort spil </li>
+        <li> Besvar en række spørgsmål og skalaer </li>
+        </ul>
+
+Dine resultater og oplysninger har en kode, så ingen kan identificere dem. Resultaterne vil blive brugt til publikation i anerkendte videnskabelige tidsskrifter, men vil naturligvis blive behandlet fortroligt. <br />
+
+    <br />
+
+    <p>
+
+Det er helt frivilligt at deltage i spillet og spørgeskemaundersøgelsen. Dine oplysninger vil blive opbevaret og behandlet sikkert og fortroligt i henhold til persondataforordningen.
+<br />
+
+     <br />
+
+
+ Jeg ønsker at deltage og giver hermed mit samtykke til, at I må behandle (herunder indsamle, opbevare fortroligt og slette) oplysninger om mig til ovenstående formål. <br />  <br />
+
+    <br />
+
+
+    <br />
+{% next_button %}
+{% endblock %}

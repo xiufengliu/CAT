@@ -60,7 +60,7 @@ dict(
         real_world_currency_per_point = 0.0125,
         num_demo_participants = 1,
         app_sequence = [
-           'welcomedk', 'survey2nd'  # survey quesitons
+           'welcomedk', 'controldk', #'survey2nd'  # survey quesitons
         ],
 )
 ]
