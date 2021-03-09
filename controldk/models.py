@@ -21,10 +21,10 @@ doc = """ N/A """
 # ******************************************************************************************************************** #
 class Subsession(BaseSubsession):
     session_name = models.StringField()
-    start_time = models.StringField()
+    exec_time = models.StringField()
     def creating_session(self):
         self.session_name = self.session.config['name']
-        self.start_time = datetime.now(dt.timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
+        self.exec_time = datetime.now(dt.timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
 
 # ******************************************************************************************************************** #
 # *** CLASS GROUP *** #

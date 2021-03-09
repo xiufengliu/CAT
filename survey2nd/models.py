@@ -839,3 +839,4 @@ class Player(BasePlayer):
         verbose_name='Jeg har krav på sæbehandling.',
         widget=widgets.RadioSelect()
     )
+#####################

@@ -1,0 +1,53 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+
+{% block title %}
+    Spørgeskema
+{% endblock %}
+
+{% block content %}
+ Hvor risikofyldt synes du selv at det er at...
+<hr>
+{% formfield player.q1 with label="…indrømme, at du har en anderledes smag end dine venner?" %}
+{% formfield player.q2 with label="…campere ude i vildmarken?" %}
+{% formfield player.q3 with label="… satse en dagløn på hestevæddeløb?" %}
+{% formfield player.q4 with label=" …investere 10% af din årsløn i en pensionsfond? " %}
+{% formfield player.q5 with label="… drikke store mængder alkohol ved en social begivenhed?" %}
+{% formfield player.q6 with label="… angive et lidt for højt fradrag til SKAT?" %}
+{% formfield player.q7 with label=" …erklære dig uenig med en autoritetsfigur hvad angår et vigtigt emne? " %}
+{% formfield player.q8 with label="…satse en dagløn på et pokerspil med høje indsatser?" %}
+{% formfield player.q9 with label="… have en affære med en gift kvinde/mand?" %}
+{% formfield player.q10 with label="… tage æren for en anden persons arbejde?" %}
+{% formfield player.q11 with label="… køre ned ad en skiløjpe, der er vanskeligere end dine evner rækker til?" %}
+
+{% formfield player.q12 with label="…investere 5% af din årsindtægt i en stærkt spekulativ aktie?" %}
+{% formfield player.q13 with label="… tage på whitewater rafting om foråret når strømmen er stærkest?" %}
+{% formfield player.q14 with label="…satse en dagløn på en sportskamp (f.eks. fodbold)?" %}
+{% formfield player.q15 with label="…dyrke ubeskyttet sex?" %}
+{% formfield player.q16 with label="… røbe en vens hemmelighed til en anden person?" %}
+{% formfield player.q17 with label="… køre i bil uden sele?" %}
+{% formfield player.q18 with label="…investere 10% af din årsindtægt i en nystartet virksomhed?" %}
+{% formfield player.q19 with label="… lære at springe i faldskærm?" %}
+{% formfield player.q20 with label="… køre på motorcykel uden hjelm?" %}
+{% formfield player.q21 with label="…vælge en karriere du virkelig føler for, i stedet for en mere sikker karriere?" %}
+{% formfield player.q22 with label="…sige hvad du mener om en upopulær sag til et møde på arbejdet?" %}
+{% formfield player.q23 with label="… tage solbad uden solcreme?" %}
+{% formfield player.q24 with label="… springe bungee-jump fra en høj bro?" %}
+{% formfield player.q25 with label="… flyve en lille flyvemaskine?" %}
+{% formfield player.q26 with label="… gå alene hjem om natten gennem et af byens farlige kvarterer?" %}
+{% formfield player.q27 with label=" …flytte til en by langt væk fra din familie?" %}
+{% formfield player.q28 with label="…påbegynde en ny karriere midt i 30'erne?" %}
+{% formfield player.q29 with label="… efterlade dine små børn alene hjemme mens du løber et ærinde?" %}
+{% formfield player.q30 with label="… beholde en pung du har fundet, som indeholder 1.000 kroner?" %}
+{% formfield player.q31 with label="… flytte til et hus beliggende langs bredden af en flod?" %}
+{% formfield player.q32 with label="… sende børn i skolen, imens DMI varsler om farligt vejr i dit område?" %}
+{% formfield player.q33 with label="… køre på en oversvømmet vej?" %}
+{% formfield player.q34 with label="… parkere din bil i et udsat område, imens DMI varsler om farligt vejr i regionen?" %}
+{% formfield player.q35 with label="… gå på vandreture, imens DMI varsler om farligt vejr i området?" %}
+
+<hr>
+
+
+{% next_button %}
+{% endblock %}

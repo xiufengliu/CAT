@@ -96,7 +96,6 @@ class SurveyQuestions(Page):
     ]
 
     def vars_for_template(self):
-        return dict(total_payoff=self.participant.payoff,
-                    )
+        pass
 
 page_sequence = [SurveyQuestions]
