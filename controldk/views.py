@@ -20,7 +20,6 @@ def vars_for_all_templates(self):
 
 class Instr(Page):
     def vars_for_template(self):
-        print('>>>Instr::vars_for_template')
         rnd = random.Random(time.time_ns())
         self.player.risk = rnd.choice(Constants.risks)
         return {'risk': self.player.risk}
@@ -28,7 +27,6 @@ class Instr(Page):
 
 class PayoffInfo(Page):
     def vars_for_template(self):
-        print('>>>PayoffInfo::vars_for_template')
         #risk  = self.session.vars['control_risks'][self.round_number-1]
         return {'payoff_when_flood_without_adapt' : c(50),
                 'total_payoff': c(Constants.stakes),
@@ -44,7 +42,6 @@ class Choice(Page):
     ]
 
     def vars_for_template(self):
-        print('>>>Choice::vars_for_template')
         return {'risk' : self.player.risk}
 
 
@@ -85,7 +82,7 @@ class Results(Page):
         return self.round_number==Constants.num_rounds
 
     def vars_for_template(self):
-        print('>>>Results::vars_for_template')
+        #print('>>>Results::vars_for_template')
         result = [{
                    'round_no' : index+1,
                     'risk' : p.risk,
