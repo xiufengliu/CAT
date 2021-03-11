@@ -2,6 +2,7 @@ from os import environ
 
 
 SESSION_CONFIGS = [
+
     dict(
         name = "CAT_Apps",
         display_name = "CAT Apps",
@@ -54,6 +55,7 @@ dict(
             'survey1st'  # survey quesitons
         ],
 ),
+
 dict(
         name = "CATE_Apps",
         display_name = "CAT+E Apps",
@@ -61,8 +63,8 @@ dict(
         num_demo_participants = 1,
         app_sequence = [
            'welcomedk', 'controldk',
-           # 'survey2nd',
-           # 'surveydospert'  # survey quesitons
+            'survey2nd',
+            'surveydospert'  # survey quesitons
         ],
 )
 ]

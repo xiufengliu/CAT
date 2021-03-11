@@ -9,7 +9,7 @@ export OTREE_AUTH_LEVEL=DEMO
 #export DATABASE_URL=sqlite:////opt/CAT/db.sqlite3
 #otree resetdb
 
-#otree prodserver 41064
+#otree prodserver 8080
 
 otree devserver 8080
 #otree runserver -v 3 8080
