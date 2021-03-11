@@ -60,7 +60,6 @@ class Bomb(Page):
         return True
 
     def vars_for_template(self):
-        print('>>>Bomb::vars_for_template')
         otree_vars = {
             'num_rows':      Constants.num_rows,
             'num_cols':      Constants.num_cols,

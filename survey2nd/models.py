@@ -544,9 +544,365 @@ class Player(BasePlayer):
         widget=widgets.RadioSelect()
     )
 
-### 6.FLOOD DOMAIN-SPECIFIC RISK-TAKING SCALE F-DOSPERT
+    s531_movehouse = models.CharField(
+        choices=[['highly_unlikely', 'højst usandsynligt'],
+                 ['unlikely', 'usandsynligt'],
+                 ['not_certain', 'ikke sikkert'],
+                 ['likely', 'sandsynligt'],
+                 ['highly_likely', 'højst sandsynligt'],
+                 ],
+        verbose_name='…flytte til et hus beliggende langs bredden af en flod',
+        widget=widgets.RadioSelect()
+    )
+    s532_sendkidtoschool = models.CharField(
+        choices=[['highly_unlikely', 'højst usandsynligt'],
+                 ['unlikely', 'usandsynligt'],
+                 ['not_certain', 'ikke sikkert'],
+                 ['likely', 'sandsynligt'],
+                 ['highly_likely', 'højst sandsynligt'],
+                 ],
+        verbose_name='…sende børn i skolen, imens DMI varsler om farligt vejr i dit område',
+        widget=widgets.RadioSelect()
+    )
+    s533_drivefloodedroad = models.CharField(
+        choices=[['highly_unlikely', 'højst usandsynligt'],
+                 ['unlikely', 'usandsynligt'],
+                 ['not_certain', 'ikke sikkert'],
+                 ['likely', 'sandsynligt'],
+                 ['highly_likely', 'højst sandsynligt'],
+                 ],
+        verbose_name='…køre på en oversvømmet vej.',
+        widget=widgets.RadioSelect()
+    )
+    s534_parkcar = models.CharField(
+        choices=[['highly_unlikely', 'højst usandsynligt'],
+                 ['unlikely', 'usandsynligt'],
+                 ['not_certain', 'ikke sikkert'],
+                 ['likely', 'sandsynligt'],
+                 ['highly_likely', 'højst sandsynligt'],
+                 ],
+        verbose_name='…parkere din bil i et udsat område, imens DMI varsler om farligt vejr i regionen.',
+        widget=widgets.RadioSelect()
+    )
+    s535_hiking = models.CharField(
+        choices=[['highly_unlikely', 'højst usandsynligt'],
+                 ['unlikely', 'usandsynligt'],
+                 ['not_certain', 'ikke sikkert'],
+                 ['likely', 'sandsynligt'],
+                 ['highly_likely', 'højst sandsynligt'],
+                 ],
+        verbose_name='…gå på vandreture, imens DMI varsler om farligt vejr i området.',
+        widget=widgets.RadioSelect()
+    )
 
-    s61_movehouse = models.CharField(
+    ### 6.FLOOD DOMAIN-SPECIFIC RISK-TAKING SCALE F-DOSPERT
+    s61_diff_taste = models.CharField(
+        choices=[['Not_risky_at_all', 'Slet ikke risikofyldt'],
+                 ['Very_little_risk', 'Meget lidt risiko'],
+                 ['No_risk', 'Nogen risiko'],
+                 ['High_risk', 'Høj risiko'],
+                 ['Very_high_risk', 'Allerhøjest risiko'],
+                 ],
+        verbose_name='…indrømme, at du har en anderledes smag end dine venner?',
+        widget=widgets.RadioSelect()
+    )
+
+    s62_camping = models.CharField(
+        choices=[['Not_risky_at_all', 'Slet ikke risikofyldt'],
+                 ['Very_little_risk', 'Meget lidt risiko'],
+                 ['No_risk', 'Nogen risiko'],
+                 ['High_risk', 'Høj risiko'],
+                 ['Very_high_risk', 'Allerhøjest risiko'],
+                 ],
+        verbose_name='…campere ude i vildmarken?',
+        widget=widgets.RadioSelect()
+    )
+    s63_beghorseracing = models.CharField(
+        choices=[['Not_risky_at_all', 'Slet ikke risikofyldt'],
+                 ['Very_little_risk', 'Meget lidt risiko'],
+                 ['No_risk', 'Nogen risiko'],
+                 ['High_risk', 'Høj risiko'],
+                 ['Very_high_risk', 'Allerhøjest risiko'],
+                 ],
+        verbose_name='…satse en dagløn på hestevæddeløb?',
+        widget=widgets.RadioSelect()
+    )
+    s64_investfund = models.CharField(
+        choices=[['Not_risky_at_all', 'Slet ikke risikofyldt'],
+                 ['Very_little_risk', 'Meget lidt risiko'],
+                 ['No_risk', 'Nogen risiko'],
+                 ['High_risk', 'Høj risiko'],
+                 ['Very_high_risk', 'Allerhøjest risiko'],
+                 ],
+        verbose_name='…investere 10% af din årsløn i en pensionsfond?',
+        widget=widgets.RadioSelect()
+    )
+    s65_drinking = models.CharField(
+        choices=[['Not_risky_at_all', 'Slet ikke risikofyldt'],
+                 ['Very_little_risk', 'Meget lidt risiko'],
+                 ['No_risk', 'Nogen risiko'],
+                 ['High_risk', 'Høj risiko'],
+                 ['Very_high_risk', 'Allerhøjest risiko'],
+                 ],
+        verbose_name='…drikke store mængder alkohol ved en social begivenhed?',
+        widget=widgets.RadioSelect()
+    )
+    s66_taxdeduction = models.CharField(
+        choices=[['Not_risky_at_all', 'Slet ikke risikofyldt'],
+                 ['Very_little_risk', 'Meget lidt risiko'],
+                 ['No_risk', 'Nogen risiko'],
+                 ['High_risk', 'Høj risiko'],
+                 ['Very_high_risk', 'Allerhøjest risiko'],
+                 ],
+        verbose_name='…angive et lidt for højt fradrag til SKAT?',
+        widget=widgets.RadioSelect()
+    )
+    s67_disagreeauth = models.CharField(
+        choices=[['Not_risky_at_all', 'Slet ikke risikofyldt'],
+                 ['Very_little_risk', 'Meget lidt risiko'],
+                 ['No_risk', 'Nogen risiko'],
+                 ['High_risk', 'Høj risiko'],
+                 ['Very_high_risk', 'Allerhøjest risiko'],
+                 ],
+        verbose_name='…erklære dig uenig med en autoritetsfigur hvad angår et vigtigt emne?',
+        widget=widgets.RadioSelect()
+    )
+    s68_stakepokergame = models.CharField(
+        choices=[['Not_risky_at_all', 'Slet ikke risikofyldt'],
+                 ['Very_little_risk', 'Meget lidt risiko'],
+                 ['No_risk', 'Nogen risiko'],
+                 ['High_risk', 'Høj risiko'],
+                 ['Very_high_risk', 'Allerhøjest risiko'],
+                 ],
+        verbose_name='…satse en dagløn på et pokerspil med høje indsatser?',
+        widget=widgets.RadioSelect()
+    )
+    s69_affair = models.CharField(
+        choices=[['Not_risky_at_all', 'Slet ikke risikofyldt'],
+                 ['Very_little_risk', 'Meget lidt risiko'],
+                 ['No_risk', 'Nogen risiko'],
+                 ['High_risk', 'Høj risiko'],
+                 ['Very_high_risk', 'Allerhøjest risiko'],
+                 ],
+        verbose_name='…have en affære med en gift kvinde/mand?',
+        widget=widgets.RadioSelect()
+    )
+    s610_takecredit = models.CharField(
+        choices=[['Not_risky_at_all', 'Slet ikke risikofyldt'],
+                 ['Very_little_risk', 'Meget lidt risiko'],
+                 ['No_risk', 'Nogen risiko'],
+                 ['High_risk', 'Høj risiko'],
+                 ['Very_high_risk', 'Allerhøjest risiko'],
+                 ],
+        verbose_name='…tage æren for en anden persons arbejde?',
+        widget=widgets.RadioSelect()
+    )
+    s611_rundownski = models.CharField(
+        choices=[['Not_risky_at_all', 'Slet ikke risikofyldt'],
+                 ['Very_little_risk', 'Meget lidt risiko'],
+                 ['No_risk', 'Nogen risiko'],
+                 ['High_risk', 'Høj risiko'],
+                 ['Very_high_risk', 'Allerhøjest risiko'],
+                 ],
+        verbose_name='…køre ned ad en skiløjpe, der er vanskeligere end dine evner rækker til?',
+        widget=widgets.RadioSelect()
+    )
+    s612_invest5perincome = models.CharField(
+        choices=[['Not_risky_at_all', 'Slet ikke risikofyldt'],
+                 ['Very_little_risk', 'Meget lidt risiko'],
+                 ['No_risk', 'Nogen risiko'],
+                 ['High_risk', 'Høj risiko'],
+                 ['Very_high_risk', 'Allerhøjest risiko'],
+                 ],
+        verbose_name='…investere 5% af din årsindtægt i en stærkt spekulativ aktie?',
+        widget=widgets.RadioSelect()
+    )
+    s613_whitewaterrafting = models.CharField(
+        choices=[['Not_risky_at_all', 'Slet ikke risikofyldt'],
+                 ['Very_little_risk', 'Meget lidt risiko'],
+                 ['No_risk', 'Nogen risiko'],
+                 ['High_risk', 'Høj risiko'],
+                 ['Very_high_risk', 'Allerhøjest risiko'],
+                 ],
+        verbose_name='…tage på whitewater rafting om foråret når strømmen er stærkest?',
+        widget=widgets.RadioSelect()
+    )
+    s614_wageonmatch = models.CharField(
+        choices=[['Not_risky_at_all', 'Slet ikke risikofyldt'],
+                 ['Very_little_risk', 'Meget lidt risiko'],
+                 ['No_risk', 'Nogen risiko'],
+                 ['High_risk', 'Høj risiko'],
+                 ['Very_high_risk', 'Allerhøjest risiko'],
+                 ],
+        verbose_name='…satse en dagløn på en sportskamp (f.eks. fodbold, boksning eller håndbold)??',
+        widget=widgets.RadioSelect()
+    )
+    s615_unsupportedsex = models.CharField(
+        choices=[['Not_risky_at_all', 'Slet ikke risikofyldt'],
+                 ['Very_little_risk', 'Meget lidt risiko'],
+                 ['No_risk', 'Nogen risiko'],
+                 ['High_risk', 'Høj risiko'],
+                 ['Very_high_risk', 'Allerhøjest risiko'],
+                 ],
+        verbose_name='…dyrke ubeskyttet sex?',
+        widget=widgets.RadioSelect()
+    )
+    s616_revealsecret = models.CharField(
+        choices=[['Not_risky_at_all', 'Slet ikke risikofyldt'],
+                 ['Very_little_risk', 'Meget lidt risiko'],
+                 ['No_risk', 'Nogen risiko'],
+                 ['High_risk', 'Høj risiko'],
+                 ['Very_high_risk', 'Allerhøjest risiko'],
+                 ],
+        verbose_name='…røbe en vens hemmelighed til en anden person?',
+        widget=widgets.RadioSelect()
+    )
+    s617_drivecarnobelt = models.CharField(
+        choices=[['Not_risky_at_all', 'Slet ikke risikofyldt'],
+                 ['Very_little_risk', 'Meget lidt risiko'],
+                 ['No_risk', 'Nogen risiko'],
+                 ['High_risk', 'Høj risiko'],
+                 ['Very_high_risk', 'Allerhøjest risiko'],
+                 ],
+        verbose_name='…køre i bil uden sele?',
+        widget=widgets.RadioSelect()
+    )
+    s618_investstartup = models.CharField(
+        choices=[['Not_risky_at_all', 'Slet ikke risikofyldt'],
+                 ['Very_little_risk', 'Meget lidt risiko'],
+                 ['No_risk', 'Nogen risiko'],
+                 ['High_risk', 'Høj risiko'],
+                 ['Very_high_risk', 'Allerhøjest risiko'],
+                 ],
+        verbose_name='…investere 10% af din årsindtægt i en nystartet virksomhed?',
+        widget=widgets.RadioSelect()
+    )
+    s619_learnparachute = models.CharField(
+        choices=[['Not_risky_at_all', 'Slet ikke risikofyldt'],
+                 ['Very_little_risk', 'Meget lidt risiko'],
+                 ['No_risk', 'Nogen risiko'],
+                 ['High_risk', 'Høj risiko'],
+                 ['Very_high_risk', 'Allerhøjest risiko'],
+                 ],
+        verbose_name='…lære at springe i faldskærm?',
+        widget=widgets.RadioSelect()
+    )
+    s620_ridemoto = models.CharField(
+        choices=[['Not_risky_at_all', 'Slet ikke risikofyldt'],
+                 ['Very_little_risk', 'Meget lidt risiko'],
+                 ['No_risk', 'Nogen risiko'],
+                 ['High_risk', 'Høj risiko'],
+                 ['Very_high_risk', 'Allerhøjest risiko'],
+                 ],
+        verbose_name='…køre på motorcykel uden hjelm?',
+        widget=widgets.RadioSelect()
+    )
+    s621_choosecareer = models.CharField(
+        choices=[['Not_risky_at_all', 'Slet ikke risikofyldt'],
+                 ['Very_little_risk', 'Meget lidt risiko'],
+                 ['No_risk', 'Nogen risiko'],
+                 ['High_risk', 'Høj risiko'],
+                 ['Very_high_risk', 'Allerhøjest risiko'],
+                 ],
+        verbose_name='…vælge en karriere du virkelig føler for, i stedet for en mere sikker karriere?',
+        widget=widgets.RadioSelect()
+    )
+    s622_sayunpopularcase = models.CharField(
+        choices=[['Not_risky_at_all', 'Slet ikke risikofyldt'],
+                 ['Very_little_risk', 'Meget lidt risiko'],
+                 ['No_risk', 'Nogen risiko'],
+                 ['High_risk', 'Høj risiko'],
+                 ['Very_high_risk', 'Allerhøjest risiko'],
+                 ],
+        verbose_name='…sige hvad du mener om en upopulær sag til et møde på arbejdet?',
+        widget=widgets.RadioSelect()
+    )
+
+    s623_sunbathe = models.CharField(
+        choices=[['Not_risky_at_all', 'Slet ikke risikofyldt'],
+                 ['Very_little_risk', 'Meget lidt risiko'],
+                 ['No_risk', 'Nogen risiko'],
+                 ['High_risk', 'Høj risiko'],
+                 ['Very_high_risk', 'Allerhøjest risiko'],
+                 ],
+        verbose_name='…tage solbad uden solcreme?',
+        widget=widgets.RadioSelect()
+    )
+
+    s624_jumpbungee = models.CharField(
+        choices=[['Not_risky_at_all', 'Slet ikke risikofyldt'],
+                 ['Very_little_risk', 'Meget lidt risiko'],
+                 ['No_risk', 'Nogen risiko'],
+                 ['High_risk', 'Høj risiko'],
+                 ['Very_high_risk', 'Allerhøjest risiko'],
+                 ],
+        verbose_name='…springe bungee-jump fra en høj bro?',
+        widget=widgets.RadioSelect()
+    )
+
+    s625_takesmallplane = models.CharField(
+        choices=[['Not_risky_at_all', 'Slet ikke risikofyldt'],
+                 ['Very_little_risk', 'Meget lidt risiko'],
+                 ['No_risk', 'Nogen risiko'],
+                 ['High_risk', 'Høj risiko'],
+                 ['Very_high_risk', 'Allerhøjest risiko'],
+                 ],
+        verbose_name='…flyve en lille flyvemaskine?',
+        widget=widgets.RadioSelect()
+    )
+
+    s626_gohomealone = models.CharField(
+        choices=[['Not_risky_at_all', 'Slet ikke risikofyldt'],
+                 ['Very_little_risk', 'Meget lidt risiko'],
+                 ['No_risk', 'Nogen risiko'],
+                 ['High_risk', 'Høj risiko'],
+                 ['Very_high_risk', 'Allerhøjest risiko'],
+                 ],
+        verbose_name='…gå alene hjem om natten gennem et af byens farlige kvarterer?',
+        widget=widgets.RadioSelect()
+    )
+    s627_movetofarawaycity = models.CharField(
+        choices=[['Not_risky_at_all', 'Slet ikke risikofyldt'],
+                 ['Very_little_risk', 'Meget lidt risiko'],
+                 ['No_risk', 'Nogen risiko'],
+                 ['High_risk', 'Høj risiko'],
+                 ['Very_high_risk', 'Allerhøjest risiko'],
+                 ],
+        verbose_name='…flytte til en by langt væk fra din familie?',
+        widget=widgets.RadioSelect()
+    )
+    s628_startnewcareer = models.CharField(
+        choices=[['Not_risky_at_all', 'Slet ikke risikofyldt'],
+                 ['Very_little_risk', 'Meget lidt risiko'],
+                 ['No_risk', 'Nogen risiko'],
+                 ['High_risk', 'Høj risiko'],
+                 ['Very_high_risk', 'Allerhøjest risiko'],
+                 ],
+        verbose_name="…påbegynde en ny karriere midt i 30'erne?",
+        widget=widgets.RadioSelect()
+    )
+    s629_leavekidathome = models.CharField(
+        choices=[['Not_risky_at_all', 'Slet ikke risikofyldt'],
+                 ['Very_little_risk', 'Meget lidt risiko'],
+                 ['No_risk', 'Nogen risiko'],
+                 ['High_risk', 'Høj risiko'],
+                 ['Very_high_risk', 'Allerhøjest risiko'],
+                 ],
+        verbose_name='…efterlade dine små børn alene hjemme mens du løber et ærinde?',
+        widget=widgets.RadioSelect()
+    )
+    s630_keeppurse = models.CharField(
+        choices=[['Not_risky_at_all', 'Slet ikke risikofyldt'],
+                 ['Very_little_risk', 'Meget lidt risiko'],
+                 ['No_risk', 'Nogen risiko'],
+                 ['High_risk', 'Høj risiko'],
+                 ['Very_high_risk', 'Allerhøjest risiko'],
+                 ],
+        verbose_name='…beholde en pung du har fundet, som indeholder 1.000 kroner?',
+        widget=widgets.RadioSelect()
+    )
+
+    s631_movehouse = models.CharField(
         choices=[['Not_risky_at_all', 'Slet ikke risikofyldt'],
                  ['Very_little_risk', 'Meget lidt risiko'],
                  ['No_risk', 'Nogen risiko'],
@@ -556,7 +912,7 @@ class Player(BasePlayer):
         verbose_name='…flytte til et hus beliggende langs bredden af en flod',
         widget=widgets.RadioSelect()
     )
-    s62_sendkidtoschool = models.CharField(
+    s632_sendkidtoschool = models.CharField(
         choices=[['Not_risky_at_all', 'Slet ikke risikofyldt'],
                  ['Very_little_risk', 'Meget lidt risiko'],
                  ['No_risk', 'Nogen risiko'],
@@ -566,7 +922,7 @@ class Player(BasePlayer):
         verbose_name='…sende børn i skolen, imens DMI varsler om farligt vejr i dit område',
         widget=widgets.RadioSelect()
     )
-    s63_drivefloodedroad = models.CharField(
+    s633_drivefloodedroad = models.CharField(
         choices=[['Not_risky_at_all', 'Slet ikke risikofyldt'],
                  ['Very_little_risk', 'Meget lidt risiko'],
                  ['No_risk', 'Nogen risiko'],
@@ -576,7 +932,7 @@ class Player(BasePlayer):
         verbose_name='…køre på en oversvømmet vej.',
         widget=widgets.RadioSelect()
     )
-    s64_parkcar = models.CharField(
+    s634_parkcar = models.CharField(
         choices=[['Not_risky_at_all', 'Slet ikke risikofyldt'],
                  ['Very_little_risk', 'Meget lidt risiko'],
                  ['No_risk', 'Nogen risiko'],
@@ -586,7 +942,7 @@ class Player(BasePlayer):
         verbose_name='…parkere din bil i et udsat område, imens DMI varsler om farligt vejr i regionen.',
         widget=widgets.RadioSelect()
     )
-    s65_hiking = models.CharField(
+    s635_hiking = models.CharField(
         choices=[['Not_risky_at_all', 'Slet ikke risikofyldt'],
                  ['Very_little_risk', 'Meget lidt risiko'],
                  ['No_risk', 'Nogen risiko'],
@@ -597,7 +953,8 @@ class Player(BasePlayer):
         widget=widgets.RadioSelect()
     )
 
-#### 7. PERSONALITY INVENTORY HEXACO - BHI (DK)
+
+    #### 7. PERSONALITY INVENTORY HEXACO - BHI (DK)
 
     s71_lookpainting = models.CharField(
         choices=[['strongly_agree', 'meget enig'],
