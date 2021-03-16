@@ -8,8 +8,7 @@ from ._builtin import Page
 # ******************************************************************************************************************** #
 # *** PAGE SEQUENCE *** #
 # ******************************************************************************************************************** #
-
-class SurveyQuestions(Page):
+class SQ1(Page):
     form_model = models.Player
     form_fields = [
         's11_gender',
@@ -23,16 +22,35 @@ class SurveyQuestions(Page):
         's19_is_exposed_climate_event',
         's110_desc_climate_event',
         's111_likelihood_climent_event',
-        's112_degree_or_disagree',
+        's112_degree_or_disagree']
+
+class SQ2(Page):
+    form_model = models.Player
+    form_fields = [
         's21_prefered_option',
         's22_program_ab',
-        's23_program_cd',
+        's23_program_cd'
+        ]
+
+class SQ3(Page):
+    form_model = models.Player
+    form_fields = [
         's31_findsolution',
         's32_findvalue',
-        's33_understand_issue',
+        's33_understand_issue'
+    ]
+
+class SQ4(Page):
+    form_model = models.Player
+    form_fields = [
         's41_adversity',
         's42_staycalm',
-        's43_meaning_exp',
+        's43_meaning_exp'
+    ]
+
+class SQ5(Page):
+    form_model = models.Player
+    form_fields = [
         's51_diff_taste',
         's52_camping',
         's53_beghorseracing',
@@ -67,7 +85,12 @@ class SurveyQuestions(Page):
         's532_sendkidtoschool',
         's533_drivefloodedroad',
         's534_parkcar',
-        's535_hiking',
+        's535_hiking'
+    ]
+
+class SQ6(Page):
+    form_model = models.Player
+    form_fields = [
         's61_diff_taste',
         's62_camping',
         's63_beghorseracing',
@@ -102,7 +125,12 @@ class SurveyQuestions(Page):
         's632_sendkidtoschool',
         's633_drivefloodedroad',
         's634_parkcar',
-        's635_hiking',
+        's635_hiking'
+    ]
+
+class SQ7(Page):
+    form_model = models.Player
+    form_fields = [
         's71_lookpainting',
         's72_thingsinplace',
         's73_remainunkind',
@@ -127,10 +155,7 @@ class SurveyQuestions(Page):
         's722_wellmanner',
         's723_tear',
         's724_soap'
-
     ]
 
-    def vars_for_template(self):
-        pass
 
-page_sequence = [SurveyQuestions]
+page_sequence = [SQ1, SQ2, SQ3, SQ4, SQ5, SQ6, SQ7]

@@ -1,0 +1,21 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+
+
+{% block content %}
+<h3>2. DINE PRÆFERENCER</h3>
+{% formfield player.s21_prefered_option %}
+Forestil dig, at regeringen forbereder sig på en klimakatastrofe, hvor 600 mennesker forventes at omkomme. To alternative programmer til at mindske katastrofen er blevet foreslået. Antag, at det nøjagtige videnskabelige skøn over konsekvenserne af programmerne er som følger:
+{% formfield player.s22_program_ab %}
+{% formfield player.s23_program_cd %}
+<hr>
+<div class="row">
+    <div class="col">
+        <button class="otree-btn-next btn btn-primary next-button otree-next-button">Fortsætte</button>
+    </div>
+    <div class="col">
+      Del 2 af 7
+    </div>
+ </div>
+{% endblock %}
