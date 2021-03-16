@@ -2,69 +2,67 @@ from os import environ
 
 
 SESSION_CONFIGS = [
+#
+#     dict(
+#         name = "CAT_Apps",
+#         display_name = "CAT Apps",
+#         real_world_currency_per_point = 0.0125,
+#         num_demo_participants= 3,
+#         app_sequence= [
+#             'welcome',  # Welcome
+#             'control',  # Phase 1
+#             # 'control_forcedloss',  # Phase 1
+#             'ambiguity',  # Phase 2
+#             'loss',  # Phase 3
+#             'myopia',  # Phase 4
+#             'coordination',  # Phase 5
+#             'coordination_amb',  # Phase 6
+#             'communication',  # Phase 7
+#             'payment_info',  # Payment summary
+#             'survey1st'  # survey quesitons
+#         ],
+#     ),
+#  dict(
+#         name = "CATC_Apps",
+#         display_name = "CAT+C Apps",
+#         real_world_currency_per_point = 0.0125,
+#         num_demo_participants = 3,
+#         app_sequence = [
+#             'welcome',  # Welcome
+#             'control_forcedloss',  # Phase 1
+#             'ambiguity',  # Phase 2
+#             'coordination',  # Phase 5
+#             'coordination_amb',  # Phase 6
+#             'communication',  # Phase 7
+#             'myopia',
+#             'payment_info',  # Payment summary
+#             'survey1st'  # survey quesitons
+#         ],
+# ),
+# dict(
+#         name = "CATD_Apps",
+#         display_name = "CAT+D Apps",
+#         real_world_currency_per_point = 0.0125,
+#         num_demo_participants = 3,
+#         app_sequence = [
+#             'welcome',  # Welcome
+#             'control',  # Phase 1
+#             'ambiguity',  # Phase 2
+#             'coordination',  # Phase 5
+#             'coordination_amb',  # Phase 6
+#             'communication',  # Phase 7
+#             'payment_info',  # Payment summary
+#             'survey1st'  # survey quesitons
+#         ],
+# ),
 
-    dict(
+dict(
         name = "CAT_Apps",
         display_name = "CAT Apps",
         real_world_currency_per_point = 0.0125,
-        num_demo_participants= 3,
-        app_sequence= [
-            'welcome',  # Welcome
-            'control',  # Phase 1
-            # 'control_forcedloss',  # Phase 1
-            'ambiguity',  # Phase 2
-            'loss',  # Phase 3
-            'myopia',  # Phase 4
-            'coordination',  # Phase 5
-            'coordination_amb',  # Phase 6
-            'communication',  # Phase 7
-            'payment_info',  # Payment summary
-            'survey1st'  # survey quesitons
-        ],
-    ),
- dict(
-        name = "CATC_Apps",
-        display_name = "CAT+C Apps",
-        real_world_currency_per_point = 0.0125,
-        num_demo_participants = 3,
-        app_sequence = [
-            'welcome',  # Welcome
-            'control_forcedloss',  # Phase 1
-            'ambiguity',  # Phase 2
-            'coordination',  # Phase 5
-            'coordination_amb',  # Phase 6
-            'communication',  # Phase 7
-            'myopia',
-            'payment_info',  # Payment summary
-            'survey1st'  # survey quesitons
-        ],
-),
-dict(
-        name = "CATD_Apps",
-        display_name = "CAT+D Apps",
-        real_world_currency_per_point = 0.0125,
-        num_demo_participants = 3,
-        app_sequence = [
-            'welcome',  # Welcome
-            'control',  # Phase 1
-            'ambiguity',  # Phase 2
-            'coordination',  # Phase 5
-            'coordination_amb',  # Phase 6
-            'communication',  # Phase 7
-            'payment_info',  # Payment summary
-            'survey1st'  # survey quesitons
-        ],
-),
-
-dict(
-        name = "CATE_Apps",
-        display_name = "CAT+E Apps",
-        real_world_currency_per_point = 0.0125,
         num_demo_participants = 1,
         app_sequence = [
-           'welcomedk', 'controldk',
-            'survey2nd',
-            'surveydospert'  # survey quesitons
+           'welcomedk', 'controldk',   'survey2nd'
         ],
 )
 ]

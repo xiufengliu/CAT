@@ -8,6 +8,9 @@ from ._builtin import Page
 # ******************************************************************************************************************** #
 # *** PAGE SEQUENCE *** #
 # ******************************************************************************************************************** #
+class Intro(Page):
+    pass
+
 class SQ1(Page):
     form_model = models.Player
     form_fields = [
@@ -158,4 +161,4 @@ class SQ7(Page):
     ]
 
 
-page_sequence = [SQ1, SQ2, SQ3, SQ4, SQ5, SQ6, SQ7]
+page_sequence = [Intro, SQ1, SQ2, SQ3, SQ4, SQ5, SQ6, SQ7]
