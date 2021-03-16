@@ -160,5 +160,7 @@ class SQ7(Page):
         's724_soap'
     ]
 
+class Thanks(Page):
+    pass
 
-page_sequence = [Intro, SQ1, SQ2, SQ3, SQ4, SQ5, SQ6, SQ7]
+page_sequence = [Intro, SQ1, SQ2, SQ3, SQ4, SQ5, SQ6, SQ7, Thanks]
