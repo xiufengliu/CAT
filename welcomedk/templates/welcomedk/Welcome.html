@@ -13,7 +13,7 @@
 {# *** TITLE *** #}
 {# ****************************************************************************************************************** #}
 {% block title %}
-Klimaspillet
+KLIMASPILLET
 {% endblock %}
 
 
@@ -22,14 +22,16 @@ Klimaspillet
 {# ****************************************************************************************************************** #}
 {% block content %}
     <div>
-        <p>I spillet er du en boligejer – du kan antage at du ejer et sommerhus eller en forretning hvis det er mere relevant for dig. Du skal tage en beslutning, om du vil investere i klimasikring eller ej. Investeringen sikrer dit hus mod potentielle oversvømmelser. Metoden er ikke angivet, men kan f.eks. være oprettelse af et højvandslukker eller udskiftning af kældervinduer og døre så de er tætte. Udbetalingstabellen viser hvor mange point du kan tjene i tilfælde (eller udeblivelse) af en oversvømmelse, afhængigt af om du har investeret i klimasikring eller ej. </p>
+        <p>I spillet er du en boligejer som har muligheden for at klimasikre sit hus. Tabellen viser hvor mange point du får i tilfælde (eller udeblivelse) af en oversvømmelse, afhængigt af om du investerer i klimasikring eller ej. </p>
         <p><img src="{% static 'welcomedk/images/adaptdk.png' %}"  class="img-responsive center-block" /></p>
         <br/>
     </div>
 
     <div>
-        <p>I starten af hver runde, bliver du informeret om din egen risiko. Din risiko kan være, 5 eller 10 pct. afhængig af hvor udsat din bolig er. Du skal klikke på en af de 100 blanke firkanter. Dette vil afsløre 100 huse, hvoraf 5 af husene vil være oversvømmede og 95 vil være uskadt, hvis din risiko er 5 pct. Den firkant som du tilfældigt klikker på, vil afgøre hvad der sker den periode. Hvis det er en rød firkant betyder det at dit hus er oversvømmet og at din indtjening er 50 point. Hvis det er en grøn firkant, betyder det, at dit hus er uskadt og at din indtjening er 500 point.</p>
+        <p>I starten af hver runde får du oplyst hvad risikoen for at dit hus bliver oversvømmet er. Det er enten 1, 5 eller 10 pct. Du beslutter på baggrund af den information om du vil klimasikre dit hus. </p>
+        <p>Du skal trykke på en af de 100 firkanter du bliver præsenteret for. Dette vil afsløre om du har været udsat for en oversvømmelse.</p>
         <p><img src="{% static 'welcomedk/images/game.gif' %}"  class="img-responsive center-block" /></p>
+        <p>Eksempel: Hvis din risiko er 10 pct. så er 10 af husene oversvømmede. Den firkant som du trykker på, vil afgøre resultatet. Hvis den er rød betyder det at, dit hus er oversvømmet og at du får 50 point. Hvis den er grøn betyder det, at dit hus er uskadt og at du får 500 point. Hvis du har klimasikret får du 300 point, uanset om hvilket firkant du trykker på. </p>
         <br/>
     </div>
  <button class="otree-btn-next btn btn-primary next-button otree-next-button">Fortsætte</button>
