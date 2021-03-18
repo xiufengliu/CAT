@@ -146,7 +146,7 @@ class Player(BasePlayer):
 ######## 2. Economics History (DK)
 
     s21_prefered_option = models.CharField(
-        choices=[['flatorcrown', 'Slå plat eller krone og vind 10.000 DKK med 50 procents sandsynlighed og ingenting med 50 procents sandsynlighed'],
+        choices=[['flatorcrown', 'Slå plat eller krone og vind 10.000 DKK med 50 procents sandsynlighed og 50 procents sandsynlighed for ingenting '],
                  ['win5kddk', 'Vind 5.000 DKK med sikkerhed'],
                  ['nomatter', 'Ligegyldigt, jeg synes begge muligheder er lige gode']
                  ],
@@ -155,19 +155,19 @@ class Player(BasePlayer):
     )
 
     s22_program_ab = models.CharField(
-        choices=[['progA', 'Program A: 200 mennesker bliver reddet med sikkerhed'],
-                 ['progB', 'Program B: Der er en tredjedel sandsynlighed for, at 600 mennesker bliver reddet, og to tredjedels sandsynlighed for, at ingen mennesker bliver reddet']
+        choices=[['progA', 'Scenarie A: 200 mennesker bliver reddet med sikkerhed'],
+                 ['progB', 'Scenarie B: Der er en tredjedel sandsynlighed for, at 600 mennesker bliver reddet, og to tredjedels sandsynlighed for, at ingen mennesker bliver reddet']
                  ],
-        verbose_name='Hvilke af de to programmer vil du foretrække? ',
+        verbose_name='Hvilke af de to scenarier vil du foretrække? ',
         widget=widgets.RadioSelect()
     )
 
     s23_program_cd = models.CharField(
-        choices=[['progC', 'Program C: 400 mennesker vil omkomme'],
+        choices=[['progC', 'Scenarie C: 400 mennesker vil omkomme'],
                  ['progD',
-                  'Program D: Der er en tredjedel sandsynlighed for at ingen mennesker vil omkomme og to tredjedele sandsynlighed for, at  600 mennesker vil omkomme']
+                  'Scenarie D: Der er en tredjedel sandsynlighed for, at ingen mennesker vil omkomme og to tredjedele sandsynlighed for, at  600 mennesker vil omkomme']
                  ],
-        verbose_name='Hvilke af de to programmer vil du foretrække? ',
+        verbose_name='Hvilke af de to scenarier vil du foretrække? ',
         widget=widgets.RadioSelect()
     )
 
@@ -180,7 +180,7 @@ class Player(BasePlayer):
                  ['disagree', 'uenig'],
                  ['strongdisagree', 'meget uenig'],
                  ],
-        verbose_name='Jeg er i stand til at finde løsninger på problemstillinger som jeg står over for i min hverdag.',
+        verbose_name='Jeg er i stand til at finde løsninger på problemstillinger, som opstår i min hverdag.',
         widget=widgets.RadioSelect()
     )
     s32_findvalue = models.CharField(
@@ -190,7 +190,7 @@ class Player(BasePlayer):
                  ['disagree', 'uenig'],
                  ['strongdisagree', 'meget uenig'],
                  ],
-        verbose_name='Jeg er i stand til at finde værdi i selve håndtering af de problemstillinger som jeg står over for i min hverdag.',
+        verbose_name='Jeg er i stand til at finde værdi i selve håndtering af de problemstillinger, som jeg står over for i min hverdag.',
         widget=widgets.RadioSelect()
     )
     s33_understand_issue = models.CharField(
@@ -200,7 +200,7 @@ class Player(BasePlayer):
                  ['disagree', 'uenig'],
                  ['strongdisagree', 'meget uenig'],
                  ],
-        verbose_name='Jeg er i stand til at forstå og forudsige de problemstillinger der opstår i min hverdag.',
+        verbose_name='Jeg er i stand til at forstå og forudsige de problemstillinger, som opstår i min hverdag.',
         widget=widgets.RadioSelect()
     )
 
@@ -212,7 +212,7 @@ class Player(BasePlayer):
                  ['disagree', 'uenig'],
                  ['strongdisagree', 'meget uenig'],
                  ],
-        verbose_name='De vil overkomme de modgange som følger af oversvømmelsen.',
+        verbose_name='De vil overkomme de udfordringer, som følger af oversvømmelsen.',
         widget=widgets.RadioSelect()
     )
     s42_staycalm = models.CharField(
@@ -222,7 +222,7 @@ class Player(BasePlayer):
                  ['disagree', 'uenig'],
                  ['strongdisagree', 'meget uenig'],
                  ],
-        verbose_name='De vil bevare roen imens de vil tage stilling til hvad de skal gøre.',
+        verbose_name='De vil bevare roen, imens de vil tage stilling til hvad de skal gøre.',
         widget=widgets.RadioSelect()
     )
     s43_meaning_exp = models.CharField(
@@ -232,7 +232,7 @@ class Player(BasePlayer):
                  ['disagree', 'uenig'],
                  ['strongdisagree', 'meget uenig'],
                  ],
-        verbose_name='De vil finde mening med oplevelsen.',
+        verbose_name='De vil finde mening i oplevelsen.',
         widget=widgets.RadioSelect()
     )
 
@@ -245,7 +245,7 @@ class Player(BasePlayer):
                  ['likely', 'sandsynligt'],
                  ['highly_likely', 'højst sandsynligt'],
                  ],
-        verbose_name='…indrømme, at du har en anderledes smag end dine venner?',
+        verbose_name='… indrømme, at du har en anderledes smag end dine venner?',
         widget=widgets.RadioSelect()
     )
 
@@ -256,7 +256,7 @@ class Player(BasePlayer):
                  ['likely', 'sandsynligt'],
                  ['highly_likely', 'højst sandsynligt'],
                  ],
-        verbose_name='…campere ude i vildmarken?',
+        verbose_name='… campere ude i vildmarken?',
         widget=widgets.RadioSelect()
     )
     s53_beghorseracing = models.CharField(
@@ -266,7 +266,7 @@ class Player(BasePlayer):
                  ['likely', 'sandsynligt'],
                  ['highly_likely', 'højst sandsynligt'],
                  ],
-        verbose_name='…satse en dagløn på hestevæddeløb?',
+        verbose_name='… satse en dagløn på hestevæddeløb?',
         widget=widgets.RadioSelect()
     )
     s54_investfund = models.CharField(
@@ -276,7 +276,7 @@ class Player(BasePlayer):
                  ['likely', 'sandsynligt'],
                  ['highly_likely', 'højst sandsynligt'],
                  ],
-        verbose_name='…investere 10% af din årsløn i en pensionsfond?',
+        verbose_name='… investere 10% af din årsløn i en pensionsfond?',
         widget=widgets.RadioSelect()
     )
     s55_drinking = models.CharField(
@@ -286,7 +286,7 @@ class Player(BasePlayer):
                  ['likely', 'sandsynligt'],
                  ['highly_likely', 'højst sandsynligt'],
                  ],
-        verbose_name='…drikke store mængder alkohol ved en social begivenhed?',
+        verbose_name='… drikke store mængder alkohol ved et socialt arrangement?',
         widget=widgets.RadioSelect()
     )
     s56_taxdeduction = models.CharField(
@@ -296,7 +296,7 @@ class Player(BasePlayer):
                  ['likely', 'sandsynligt'],
                  ['highly_likely', 'højst sandsynligt'],
                  ],
-        verbose_name='…angive et lidt for højt fradrag til SKAT?',
+        verbose_name='… angive et lidt for højt fradrag til SKAT?',
         widget=widgets.RadioSelect()
     )
     s57_disagreeauth = models.CharField(
@@ -306,7 +306,7 @@ class Player(BasePlayer):
                  ['likely', 'sandsynligt'],
                  ['highly_likely', 'højst sandsynligt'],
                  ],
-        verbose_name='…erklære dig uenig med en autoritetsfigur hvad angår et vigtigt emne?',
+        verbose_name='… erklære dig uenig med en autoritet, hvad angår et vigtigt emne?',
         widget=widgets.RadioSelect()
     )
     s58_stakepokergame = models.CharField(
@@ -316,7 +316,7 @@ class Player(BasePlayer):
                  ['likely', 'sandsynligt'],
                  ['highly_likely', 'højst sandsynligt'],
                  ],
-        verbose_name='…satse en dagløn på et pokerspil med høje indsatser?',
+        verbose_name='… satse en dagløn på et pokerspil med høje indsatser?',
         widget=widgets.RadioSelect()
     )
     s59_affair = models.CharField(
@@ -326,7 +326,7 @@ class Player(BasePlayer):
                  ['likely', 'sandsynligt'],
                  ['highly_likely', 'højst sandsynligt'],
                  ],
-        verbose_name='…have en affære med en gift kvinde/mand?',
+        verbose_name='… have en affære med en gift person?',
         widget=widgets.RadioSelect()
     )
     s510_takecredit = models.CharField(
@@ -336,7 +336,7 @@ class Player(BasePlayer):
                  ['likely', 'sandsynligt'],
                  ['highly_likely', 'højst sandsynligt'],
                  ],
-        verbose_name='…tage æren for en anden persons arbejde?',
+        verbose_name='… tage æren for en anden persons arbejde?',
         widget=widgets.RadioSelect()
     )
     s511_rundownski = models.CharField(
@@ -346,7 +346,7 @@ class Player(BasePlayer):
                  ['likely', 'sandsynligt'],
                  ['highly_likely', 'højst sandsynligt'],
                  ],
-        verbose_name='…køre ned ad en skiløjpe, der er vanskeligere end dine evner rækker til?',
+        verbose_name='… køre ned ad en skiløjpe, der er vanskeligere end dine evner rækker til?',
         widget=widgets.RadioSelect()
     )
     s512_invest5perincome = models.CharField(
@@ -356,7 +356,7 @@ class Player(BasePlayer):
                  ['likely', 'sandsynligt'],
                  ['highly_likely', 'højst sandsynligt'],
                  ],
-        verbose_name='…investere 5% af din årsindtægt i en stærkt spekulativ aktie?',
+        verbose_name='… investere 5% af din årsindtægt i en stærkt spekulativ aktie?',
         widget=widgets.RadioSelect()
     )
     s513_whitewaterrafting = models.CharField(
@@ -366,7 +366,7 @@ class Player(BasePlayer):
                  ['likely', 'sandsynligt'],
                  ['highly_likely', 'højst sandsynligt'],
                  ],
-        verbose_name='…tage på whitewater rafting om foråret når strømmen er stærkest?',
+        verbose_name='… tage på white water rafting om foråret når strømmen er stærkest?',
         widget=widgets.RadioSelect()
     )
     s514_wageonmatch = models.CharField(
@@ -376,7 +376,7 @@ class Player(BasePlayer):
                  ['likely', 'sandsynligt'],
                  ['highly_likely', 'højst sandsynligt'],
                  ],
-        verbose_name='…satse en dagløn på en sportskamp (f.eks. fodbold, boksning eller håndbold)??',
+        verbose_name='… satse en dagløn på en sportskamp (f.eks. fodbold, boksning eller håndbold)?',
         widget=widgets.RadioSelect()
     )
     s515_unsupportedsex = models.CharField(
@@ -386,7 +386,7 @@ class Player(BasePlayer):
                  ['likely', 'sandsynligt'],
                  ['highly_likely', 'højst sandsynligt'],
                  ],
-        verbose_name='…dyrke ubeskyttet sex?',
+        verbose_name='… dyrke ubeskyttet sex?',
         widget=widgets.RadioSelect()
     )
     s516_revealsecret = models.CharField(
@@ -396,7 +396,7 @@ class Player(BasePlayer):
                  ['likely', 'sandsynligt'],
                  ['highly_likely', 'højst sandsynligt'],
                  ],
-        verbose_name='…røbe en vens hemmelighed til en anden person?',
+        verbose_name='… røbe en vens hemmelighed til en anden person?',
         widget=widgets.RadioSelect()
     )
     s517_drivecarnobelt = models.CharField(
@@ -406,7 +406,7 @@ class Player(BasePlayer):
                  ['likely', 'sandsynligt'],
                  ['highly_likely', 'højst sandsynligt'],
                  ],
-        verbose_name='…køre i bil uden sele?',
+        verbose_name='… køre i bil uden sele?',
         widget=widgets.RadioSelect()
     )
     s518_investstartup = models.CharField(
@@ -416,7 +416,7 @@ class Player(BasePlayer):
                  ['likely', 'sandsynligt'],
                  ['highly_likely', 'højst sandsynligt'],
                  ],
-        verbose_name='…investere 10% af din årsindtægt i en nystartet virksomhed?',
+        verbose_name='… investere 10% af din årsindtægt i en nystartet virksomhed?',
         widget=widgets.RadioSelect()
     )
     s519_learnparachute = models.CharField(
@@ -426,7 +426,7 @@ class Player(BasePlayer):
                  ['likely', 'sandsynligt'],
                  ['highly_likely', 'højst sandsynligt'],
                  ],
-        verbose_name='…lære at springe i faldskærm?',
+        verbose_name='… lære at springe i faldskærm?',
         widget=widgets.RadioSelect()
     )
     s520_ridemoto = models.CharField(
@@ -436,7 +436,7 @@ class Player(BasePlayer):
                  ['likely', 'sandsynligt'],
                  ['highly_likely', 'højst sandsynligt'],
                  ],
-        verbose_name='…køre på motorcykel uden hjelm?',
+        verbose_name='… køre på motorcykel uden hjelm?',
         widget=widgets.RadioSelect()
     )
     s521_choosecareer = models.CharField(
@@ -446,7 +446,7 @@ class Player(BasePlayer):
                  ['likely', 'sandsynligt'],
                  ['highly_likely', 'højst sandsynligt'],
                  ],
-        verbose_name='…vælge en karriere du virkelig føler for, i stedet for en mere sikker karriere?',
+        verbose_name='… vælge en karriere du virkelig føler for, i stedet for en mere sikker karriere?',
         widget=widgets.RadioSelect()
     )
     s522_sayunpopularcase = models.CharField(
@@ -456,7 +456,7 @@ class Player(BasePlayer):
                  ['likely', 'sandsynligt'],
                  ['highly_likely', 'højst sandsynligt'],
                  ],
-        verbose_name='…sige hvad du mener om en upopulær sag til et møde på arbejdet?',
+        verbose_name='… sige hvad du mener om en upopulær sag til et møde på arbejdet?',
         widget=widgets.RadioSelect()
     )
 
@@ -467,7 +467,7 @@ class Player(BasePlayer):
                  ['likely', 'sandsynligt'],
                  ['highly_likely', 'højst sandsynligt'],
                  ],
-        verbose_name='…tage solbad uden solcreme?',
+        verbose_name='… tage solbad uden solcreme?',
         widget=widgets.RadioSelect()
     )
 
@@ -478,7 +478,7 @@ class Player(BasePlayer):
                  ['likely', 'sandsynligt'],
                  ['highly_likely', 'højst sandsynligt'],
                  ],
-        verbose_name='…springe bungee-jump fra en høj bro?',
+        verbose_name='… springe bungy-jump fra en høj bro?',
         widget=widgets.RadioSelect()
     )
 
@@ -489,7 +489,7 @@ class Player(BasePlayer):
                  ['likely', 'sandsynligt'],
                  ['highly_likely', 'højst sandsynligt'],
                  ],
-        verbose_name='…flyve en lille flyvemaskine?',
+        verbose_name='… flyve en lille flyvemaskine?',
         widget=widgets.RadioSelect()
     )
 
@@ -500,7 +500,7 @@ class Player(BasePlayer):
                  ['likely', 'sandsynligt'],
                  ['highly_likely', 'højst sandsynligt'],
                  ],
-        verbose_name='…gå alene hjem om natten gennem et af byens farlige kvarterer?',
+        verbose_name='… gå alene hjem om natten gennem et af byens farlige kvarterer?',
         widget=widgets.RadioSelect()
     )
     s527_movetofarawaycity = models.CharField(
@@ -510,7 +510,7 @@ class Player(BasePlayer):
                  ['likely', 'sandsynligt'],
                  ['highly_likely', 'højst sandsynligt'],
                  ],
-        verbose_name='…flytte til en by langt væk fra din familie?',
+        verbose_name='… flytte til en by langt væk fra din familie?',
         widget=widgets.RadioSelect()
     )
     s528_startnewcareer = models.CharField(
@@ -520,7 +520,7 @@ class Player(BasePlayer):
                  ['likely', 'sandsynligt'],
                  ['highly_likely', 'højst sandsynligt'],
                  ],
-        verbose_name="…påbegynde en ny karriere midt i 30'erne?",
+        verbose_name="… påbegynde en ny karriere midt i 30'erne?",
         widget=widgets.RadioSelect()
     )
     s529_leavekidathome = models.CharField(
@@ -530,7 +530,7 @@ class Player(BasePlayer):
                  ['likely', 'sandsynligt'],
                  ['highly_likely', 'højst sandsynligt'],
                  ],
-        verbose_name='…efterlade dine små børn alene hjemme mens du løber et ærinde?',
+        verbose_name='… efterlade dine små børn alene hjemme, imens du løber et ærinde?',
         widget=widgets.RadioSelect()
     )
     s530_keeppurse = models.CharField(
@@ -540,7 +540,7 @@ class Player(BasePlayer):
                  ['likely', 'sandsynligt'],
                  ['highly_likely', 'højst sandsynligt'],
                  ],
-        verbose_name='…beholde en pung du har fundet, som indeholder 1.000 kroner?',
+        verbose_name='… beholde en pung du har fundet, som indeholder 1.000 kroner?',
         widget=widgets.RadioSelect()
     )
 
@@ -551,7 +551,7 @@ class Player(BasePlayer):
                  ['likely', 'sandsynligt'],
                  ['highly_likely', 'højst sandsynligt'],
                  ],
-        verbose_name='…flytte til et hus beliggende langs bredden af en flod',
+        verbose_name='… flytte til et hus, som ligger langs bredden af en flod:',
         widget=widgets.RadioSelect()
     )
     s532_sendkidtoschool = models.CharField(
@@ -561,7 +561,7 @@ class Player(BasePlayer):
                  ['likely', 'sandsynligt'],
                  ['highly_likely', 'højst sandsynligt'],
                  ],
-        verbose_name='…sende børn i skolen, imens DMI varsler om farligt vejr i dit område',
+        verbose_name='… sende børn i skolen, imens DMI varsler om farligt vejr i dit område:',
         widget=widgets.RadioSelect()
     )
     s533_drivefloodedroad = models.CharField(
@@ -571,7 +571,7 @@ class Player(BasePlayer):
                  ['likely', 'sandsynligt'],
                  ['highly_likely', 'højst sandsynligt'],
                  ],
-        verbose_name='…køre på en oversvømmet vej.',
+        verbose_name='… køre på en oversvømmet vej.',
         widget=widgets.RadioSelect()
     )
     s534_parkcar = models.CharField(
@@ -581,7 +581,7 @@ class Player(BasePlayer):
                  ['likely', 'sandsynligt'],
                  ['highly_likely', 'højst sandsynligt'],
                  ],
-        verbose_name='…parkere din bil i et udsat område, imens DMI varsler om farligt vejr i regionen.',
+        verbose_name='… parkere din bil i et udsat område, imens DMI varsler om farligt vejr i regionen.',
         widget=widgets.RadioSelect()
     )
     s535_hiking = models.CharField(
@@ -591,7 +591,7 @@ class Player(BasePlayer):
                  ['likely', 'sandsynligt'],
                  ['highly_likely', 'højst sandsynligt'],
                  ],
-        verbose_name='…gå på vandreture, imens DMI varsler om farligt vejr i området.',
+        verbose_name='… tage på vandreture, imens DMI varsler om farligt vejr i området.',
         widget=widgets.RadioSelect()
     )
 
@@ -603,7 +603,7 @@ class Player(BasePlayer):
                  ['High_risk', 'Høj risiko'],
                  ['Very_high_risk', 'Allerhøjest risiko'],
                  ],
-        verbose_name='…indrømme, at du har en anderledes smag end dine venner?',
+        verbose_name='… indrømme, at du har en anderledes smag end dine venner?',
         widget=widgets.RadioSelect()
     )
 
@@ -614,7 +614,7 @@ class Player(BasePlayer):
                  ['High_risk', 'Høj risiko'],
                  ['Very_high_risk', 'Allerhøjest risiko'],
                  ],
-        verbose_name='…campere ude i vildmarken?',
+        verbose_name='… campere ude i vildmarken?',
         widget=widgets.RadioSelect()
     )
     s63_beghorseracing = models.CharField(
@@ -624,7 +624,7 @@ class Player(BasePlayer):
                  ['High_risk', 'Høj risiko'],
                  ['Very_high_risk', 'Allerhøjest risiko'],
                  ],
-        verbose_name='…satse en dagløn på hestevæddeløb?',
+        verbose_name='… satse en dagløn på hestevæddeløb?',
         widget=widgets.RadioSelect()
     )
     s64_investfund = models.CharField(
@@ -634,7 +634,7 @@ class Player(BasePlayer):
                  ['High_risk', 'Høj risiko'],
                  ['Very_high_risk', 'Allerhøjest risiko'],
                  ],
-        verbose_name='…investere 10% af din årsløn i en pensionsfond?',
+        verbose_name='… investere 10% af din årsløn i en pensionsfond?',
         widget=widgets.RadioSelect()
     )
     s65_drinking = models.CharField(
@@ -644,7 +644,7 @@ class Player(BasePlayer):
                  ['High_risk', 'Høj risiko'],
                  ['Very_high_risk', 'Allerhøjest risiko'],
                  ],
-        verbose_name='…drikke store mængder alkohol ved en social begivenhed?',
+        verbose_name='… drikke store mængder alkohol ved et socialt arrangement?',
         widget=widgets.RadioSelect()
     )
     s66_taxdeduction = models.CharField(
@@ -654,7 +654,7 @@ class Player(BasePlayer):
                  ['High_risk', 'Høj risiko'],
                  ['Very_high_risk', 'Allerhøjest risiko'],
                  ],
-        verbose_name='…angive et lidt for højt fradrag til SKAT?',
+        verbose_name='… angive et lidt for højt fradrag til SKAT?',
         widget=widgets.RadioSelect()
     )
     s67_disagreeauth = models.CharField(
@@ -664,7 +664,7 @@ class Player(BasePlayer):
                  ['High_risk', 'Høj risiko'],
                  ['Very_high_risk', 'Allerhøjest risiko'],
                  ],
-        verbose_name='…erklære dig uenig med en autoritetsfigur hvad angår et vigtigt emne?',
+        verbose_name='… erklære dig uenig med en autoritet hvad angår et vigtigt emne?',
         widget=widgets.RadioSelect()
     )
     s68_stakepokergame = models.CharField(
@@ -674,7 +674,7 @@ class Player(BasePlayer):
                  ['High_risk', 'Høj risiko'],
                  ['Very_high_risk', 'Allerhøjest risiko'],
                  ],
-        verbose_name='…satse en dagløn på et pokerspil med høje indsatser?',
+        verbose_name='… satse en dagløn på et pokerspil med høje indsatser?',
         widget=widgets.RadioSelect()
     )
     s69_affair = models.CharField(
@@ -684,7 +684,7 @@ class Player(BasePlayer):
                  ['High_risk', 'Høj risiko'],
                  ['Very_high_risk', 'Allerhøjest risiko'],
                  ],
-        verbose_name='…have en affære med en gift kvinde/mand?',
+        verbose_name='… have en affære med en gift person?',
         widget=widgets.RadioSelect()
     )
     s610_takecredit = models.CharField(
@@ -694,7 +694,7 @@ class Player(BasePlayer):
                  ['High_risk', 'Høj risiko'],
                  ['Very_high_risk', 'Allerhøjest risiko'],
                  ],
-        verbose_name='…tage æren for en anden persons arbejde?',
+        verbose_name='… tage æren for en anden persons arbejde?',
         widget=widgets.RadioSelect()
     )
     s611_rundownski = models.CharField(
@@ -704,7 +704,7 @@ class Player(BasePlayer):
                  ['High_risk', 'Høj risiko'],
                  ['Very_high_risk', 'Allerhøjest risiko'],
                  ],
-        verbose_name='…køre ned ad en skiløjpe, der er vanskeligere end dine evner rækker til?',
+        verbose_name='… køre ned ad en skiløjpe, der er vanskeligere end dine evner rækker til?',
         widget=widgets.RadioSelect()
     )
     s612_invest5perincome = models.CharField(
@@ -714,7 +714,7 @@ class Player(BasePlayer):
                  ['High_risk', 'Høj risiko'],
                  ['Very_high_risk', 'Allerhøjest risiko'],
                  ],
-        verbose_name='…investere 5% af din årsindtægt i en stærkt spekulativ aktie?',
+        verbose_name='… investere 5% af din årsindtægt i en stærkt spekulativ aktie?',
         widget=widgets.RadioSelect()
     )
     s613_whitewaterrafting = models.CharField(
@@ -724,7 +724,7 @@ class Player(BasePlayer):
                  ['High_risk', 'Høj risiko'],
                  ['Very_high_risk', 'Allerhøjest risiko'],
                  ],
-        verbose_name='…tage på whitewater rafting om foråret når strømmen er stærkest?',
+        verbose_name='… tage på white water rafting om foråret når strømmen er stærkest?',
         widget=widgets.RadioSelect()
     )
     s614_wageonmatch = models.CharField(
@@ -734,7 +734,7 @@ class Player(BasePlayer):
                  ['High_risk', 'Høj risiko'],
                  ['Very_high_risk', 'Allerhøjest risiko'],
                  ],
-        verbose_name='…satse en dagløn på en sportskamp (f.eks. fodbold, boksning eller håndbold)??',
+        verbose_name='… satse en dagløn på en sportskamp (f.eks. fodbold, boksning eller håndbold)??',
         widget=widgets.RadioSelect()
     )
     s615_unsupportedsex = models.CharField(
@@ -744,7 +744,7 @@ class Player(BasePlayer):
                  ['High_risk', 'Høj risiko'],
                  ['Very_high_risk', 'Allerhøjest risiko'],
                  ],
-        verbose_name='…dyrke ubeskyttet sex?',
+        verbose_name='… dyrke ubeskyttet sex?',
         widget=widgets.RadioSelect()
     )
     s616_revealsecret = models.CharField(
@@ -754,7 +754,7 @@ class Player(BasePlayer):
                  ['High_risk', 'Høj risiko'],
                  ['Very_high_risk', 'Allerhøjest risiko'],
                  ],
-        verbose_name='…røbe en vens hemmelighed til en anden person?',
+        verbose_name='… røbe en vens hemmelighed til en anden person?',
         widget=widgets.RadioSelect()
     )
     s617_drivecarnobelt = models.CharField(
@@ -764,7 +764,7 @@ class Player(BasePlayer):
                  ['High_risk', 'Høj risiko'],
                  ['Very_high_risk', 'Allerhøjest risiko'],
                  ],
-        verbose_name='…køre i bil uden sele?',
+        verbose_name='… køre i bil uden sele?',
         widget=widgets.RadioSelect()
     )
     s618_investstartup = models.CharField(
@@ -774,7 +774,7 @@ class Player(BasePlayer):
                  ['High_risk', 'Høj risiko'],
                  ['Very_high_risk', 'Allerhøjest risiko'],
                  ],
-        verbose_name='…investere 10% af din årsindtægt i en nystartet virksomhed?',
+        verbose_name='… investere 10% af din årsindtægt i en nystartet virksomhed?',
         widget=widgets.RadioSelect()
     )
     s619_learnparachute = models.CharField(
@@ -784,7 +784,7 @@ class Player(BasePlayer):
                  ['High_risk', 'Høj risiko'],
                  ['Very_high_risk', 'Allerhøjest risiko'],
                  ],
-        verbose_name='…lære at springe i faldskærm?',
+        verbose_name='… lære at springe i faldskærm?',
         widget=widgets.RadioSelect()
     )
     s620_ridemoto = models.CharField(
@@ -794,7 +794,7 @@ class Player(BasePlayer):
                  ['High_risk', 'Høj risiko'],
                  ['Very_high_risk', 'Allerhøjest risiko'],
                  ],
-        verbose_name='…køre på motorcykel uden hjelm?',
+        verbose_name='… køre på motorcykel uden hjelm?',
         widget=widgets.RadioSelect()
     )
     s621_choosecareer = models.CharField(
@@ -804,7 +804,7 @@ class Player(BasePlayer):
                  ['High_risk', 'Høj risiko'],
                  ['Very_high_risk', 'Allerhøjest risiko'],
                  ],
-        verbose_name='…vælge en karriere du virkelig føler for, i stedet for en mere sikker karriere?',
+        verbose_name='… vælge en karriere du virkelig føler for, i stedet for en mere sikker karriere?',
         widget=widgets.RadioSelect()
     )
     s622_sayunpopularcase = models.CharField(
@@ -814,7 +814,7 @@ class Player(BasePlayer):
                  ['High_risk', 'Høj risiko'],
                  ['Very_high_risk', 'Allerhøjest risiko'],
                  ],
-        verbose_name='…sige hvad du mener om en upopulær sag til et møde på arbejdet?',
+        verbose_name='… sige hvad du mener om en upopulær sag til et møde på arbejdet?',
         widget=widgets.RadioSelect()
     )
 
@@ -825,7 +825,7 @@ class Player(BasePlayer):
                  ['High_risk', 'Høj risiko'],
                  ['Very_high_risk', 'Allerhøjest risiko'],
                  ],
-        verbose_name='…tage solbad uden solcreme?',
+        verbose_name='… tage solbad uden solcreme?',
         widget=widgets.RadioSelect()
     )
 
@@ -836,7 +836,7 @@ class Player(BasePlayer):
                  ['High_risk', 'Høj risiko'],
                  ['Very_high_risk', 'Allerhøjest risiko'],
                  ],
-        verbose_name='…springe bungee-jump fra en høj bro?',
+        verbose_name='… springe bungy-jump fra en høj bro?',
         widget=widgets.RadioSelect()
     )
 
@@ -847,7 +847,7 @@ class Player(BasePlayer):
                  ['High_risk', 'Høj risiko'],
                  ['Very_high_risk', 'Allerhøjest risiko'],
                  ],
-        verbose_name='…flyve en lille flyvemaskine?',
+        verbose_name='… flyve en lille flyvemaskine?',
         widget=widgets.RadioSelect()
     )
 
@@ -858,7 +858,7 @@ class Player(BasePlayer):
                  ['High_risk', 'Høj risiko'],
                  ['Very_high_risk', 'Allerhøjest risiko'],
                  ],
-        verbose_name='…gå alene hjem om natten gennem et af byens farlige kvarterer?',
+        verbose_name='… gå alene hjem om natten gennem et af byens farlige kvarterer?',
         widget=widgets.RadioSelect()
     )
     s627_movetofarawaycity = models.CharField(
@@ -868,7 +868,7 @@ class Player(BasePlayer):
                  ['High_risk', 'Høj risiko'],
                  ['Very_high_risk', 'Allerhøjest risiko'],
                  ],
-        verbose_name='…flytte til en by langt væk fra din familie?',
+        verbose_name='… flytte til en by langt væk fra din familie?',
         widget=widgets.RadioSelect()
     )
     s628_startnewcareer = models.CharField(
@@ -878,7 +878,7 @@ class Player(BasePlayer):
                  ['High_risk', 'Høj risiko'],
                  ['Very_high_risk', 'Allerhøjest risiko'],
                  ],
-        verbose_name="…påbegynde en ny karriere midt i 30'erne?",
+        verbose_name="… påbegynde en ny karriere midt i 30'erne?",
         widget=widgets.RadioSelect()
     )
     s629_leavekidathome = models.CharField(
@@ -888,7 +888,7 @@ class Player(BasePlayer):
                  ['High_risk', 'Høj risiko'],
                  ['Very_high_risk', 'Allerhøjest risiko'],
                  ],
-        verbose_name='…efterlade dine små børn alene hjemme mens du løber et ærinde?',
+        verbose_name='… efterlade dine små børn alene hjemme, imens du løber et ærinde?',
         widget=widgets.RadioSelect()
     )
     s630_keeppurse = models.CharField(
@@ -898,7 +898,7 @@ class Player(BasePlayer):
                  ['High_risk', 'Høj risiko'],
                  ['Very_high_risk', 'Allerhøjest risiko'],
                  ],
-        verbose_name='…beholde en pung du har fundet, som indeholder 1.000 kroner?',
+        verbose_name='… beholde en pung du har fundet, som indeholder 1.000 kroner?',
         widget=widgets.RadioSelect()
     )
 
@@ -909,7 +909,7 @@ class Player(BasePlayer):
                  ['High_risk', 'Høj risiko'],
                  ['Very_high_risk', 'Allerhøjest risiko'],
                  ],
-        verbose_name='…flytte til et hus beliggende langs bredden af en flod',
+        verbose_name='… flytte til et hus beliggende langs bredden af en flod:',
         widget=widgets.RadioSelect()
     )
     s632_sendkidtoschool = models.CharField(
@@ -919,7 +919,7 @@ class Player(BasePlayer):
                  ['High_risk', 'Høj risiko'],
                  ['Very_high_risk', 'Allerhøjest risiko'],
                  ],
-        verbose_name='…sende børn i skolen, imens DMI varsler om farligt vejr i dit område',
+        verbose_name='… sende børn i skolen, imens DMI varsler om farligt vejr i dit område:',
         widget=widgets.RadioSelect()
     )
     s633_drivefloodedroad = models.CharField(
@@ -929,7 +929,7 @@ class Player(BasePlayer):
                  ['High_risk', 'Høj risiko'],
                  ['Very_high_risk', 'Allerhøjest risiko'],
                  ],
-        verbose_name='…køre på en oversvømmet vej.',
+        verbose_name='… køre på en oversvømmet vej.',
         widget=widgets.RadioSelect()
     )
     s634_parkcar = models.CharField(
@@ -939,7 +939,7 @@ class Player(BasePlayer):
                  ['High_risk', 'Høj risiko'],
                  ['Very_high_risk', 'Allerhøjest risiko'],
                  ],
-        verbose_name='…parkere din bil i et udsat område, imens DMI varsler om farligt vejr i regionen.',
+        verbose_name='… parkere din bil i et udsat område, imens DMI varsler om farligt vejr i regionen.',
         widget=widgets.RadioSelect()
     )
     s635_hiking = models.CharField(
@@ -949,7 +949,7 @@ class Player(BasePlayer):
                  ['High_risk', 'Høj risiko'],
                  ['Very_high_risk', 'Allerhøjest risiko'],
                  ],
-        verbose_name='…gå på vandreture, imens DMI varsler om farligt vejr i området.',
+        verbose_name='… tage på vandreture, imens DMI varsler om farligt vejr i området.',
         widget=widgets.RadioSelect()
     )
 
@@ -973,7 +973,7 @@ class Player(BasePlayer):
                  ['disagree', 'uenig'],
                  ['strongdisagree', 'meget uenig'],
                  ],
-        verbose_name='Jeg sørger for, at ting altid er på deres plads.',
+        verbose_name='Jeg sørger for, at mine ting altid er på deres plads.',
         widget=widgets.RadioSelect()
     )
     s73_remainunkind = models.CharField(
@@ -1073,7 +1073,7 @@ class Player(BasePlayer):
                  ['disagree', 'uenig'],
                  ['strongdisagree', 'meget uenig'],
                  ],
-        verbose_name='Jeg gad godt vide, hvordan man på uærlig vis kan kan tjene en masse penge.',
+        verbose_name='Jeg gad godt vide, hvordan man på uærlig vis kan tjene en masse penge.',
         widget=widgets.RadioSelect()
     )
     s713_goodimg = models.CharField(
@@ -1193,7 +1193,7 @@ class Player(BasePlayer):
                  ['disagree', 'uenig'],
                  ['strongdisagree', 'meget uenig'],
                  ],
-        verbose_name='Jeg har krav på sæbehandling.',
+        verbose_name='Jeg har krav på særbehandling.',
         widget=widgets.RadioSelect()
     )
 #####################
