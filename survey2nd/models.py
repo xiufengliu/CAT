@@ -113,7 +113,7 @@ class Player(BasePlayer):
 
     s19_is_exposed_climate_event = models.CharField(
         choices=[['yes', 'Ja'],
-                 ['no', 'Naj']
+                 ['no', 'Nej']
                  ],
         verbose_name = 'Har du, et familiemedlem eller ven været udsat for klimarelateret begivenheder (f.eks. oversvømmelse)?',
         widget=widgets.RadioSelect()
