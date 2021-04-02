@@ -5,12 +5,21 @@
     <img src="{% static 'welcomedk/images/dtu.png' %}"  class="rounded float-left" />
     <img src="{% static 'welcomedk/images/lb.png' %}"  class="rounded float-right" />
 </p><br/> <br/>
+    Tak for din deltagelse
 {% endblock %}
 
+
+
 {% block content %}
-<h3>Forlad venligst din kontaktperson for lotteriet</h3>
-<hr>
-{% formfield player.email %}
+
+Vi trækker lod om 5 x gavekort på 200,- til gavmildt.dk blandt alle gennemførte besvarelser.
+
+  Hvis du vælger at deltage i undersøgelsen, vil du blive bedt om at:
+        <ul>
+        <li> Hvis du vil være med i lodtrækning skal vi brug din e-mail adresse. </li>
+        <li> Dette er kun for at kunne kontakte dig i tilfælde af, at du vinder.    Din e-mail skal ikke opbevares i databasen. </li>
+        </ul>
+    {% formfield player.email %}
 <hr>
 <div class="row">
     <div class="col">
