@@ -7,21 +7,17 @@
 </p><br/> <br/>
 {% endblock %}
 
-
 {% block content %}
-<h3>3. PROBLEMHÅNDTERING</h3>
+<h3>Forlad venligst din kontaktperson for lotteriet</h3>
 <hr>
-Angiv for hvert udsagn, hvorvidt du er enig i, at de passer på dig eller ej.
-{% formfield player.s31_findsolution %}
-{% formfield player.s32_findvalue %}
-{% formfield player.s33_understand_issue %}
+{% formfield player.email %}
 <hr>
 <div class="row">
     <div class="col">
-        <button class="otree-btn-next btn btn-primary next-button otree-next-button">Fortsætte</button>
+        <button class="otree-btn-next btn btn-primary next-button otree-next-button">Godkende</button>
     </div>
     <div class="col">
-      Del 3 af 7
+      Del 7 af 7
     </div>
  </div>
 {% endblock %}

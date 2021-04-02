@@ -91,6 +91,7 @@ ROOMS = [
         name='CAT_Room',
         display_name='CAT Room',
         participant_label_file='_rooms/cat.txt',
+        use_secure_urls=True
     )
 ]
 

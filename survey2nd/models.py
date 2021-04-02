@@ -1196,4 +1196,6 @@ class Player(BasePlayer):
         verbose_name='Jeg har krav på særbehandling.',
         widget=widgets.RadioSelect()
     )
+    ################email#####
+    email = models.CharField(verbose_name='E-mail:', blank=True, default='')
 #####################

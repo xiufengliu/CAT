@@ -160,7 +160,12 @@ class SQ7(Page):
         's724_soap'
     ]
 
+class Email(Page):
+    form_model = models.Player
+    form_fields = ['email',]
+
 class Thanks(Page):
     pass
 
-page_sequence = [Intro, SQ1, SQ2, SQ3, SQ4, SQ5, SQ6, SQ7, Thanks]
+
+page_sequence = [Intro, SQ1, SQ2, SQ3, SQ4, SQ5, SQ6, SQ7, Email, Thanks]
