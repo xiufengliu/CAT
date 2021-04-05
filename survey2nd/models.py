@@ -103,7 +103,7 @@ class Player(BasePlayer):
 
     s18_house_type = models.CharField(
         choices=[['duplex', 'Etagebolig'],
-                 ['detached_house', 'Parcehus'],
+                 ['detached_house', 'Parcelhus'],
                  ['terraced_house', 'Pækkehus'],
                  ['others', 'Andet']
                  ],
