@@ -180,7 +180,7 @@ class Player(BasePlayer):
                  ['disagree', 'uenig'],
                  ['strongdisagree', 'meget uenig'],
                  ],
-        verbose_name='Jeg er i stand til at finde løsninger på problemstillinger, som opstår i min hverdag.',
+        verbose_name='Jeg er god til at finde løsninger på forskellige udfordringer og problemer, som opstår i min hverdag.',
         widget=widgets.RadioSelect()
     )
     s32_findvalue = models.CharField(
@@ -190,7 +190,7 @@ class Player(BasePlayer):
                  ['disagree', 'uenig'],
                  ['strongdisagree', 'meget uenig'],
                  ],
-        verbose_name='Jeg er i stand til at finde værdi i selve håndtering af de problemstillinger, som jeg står over for i min hverdag.',
+        verbose_name='Jeg oplever, at udfordring og problemer skaber værdi for mit liv.',
         widget=widgets.RadioSelect()
     )
     s33_understand_issue = models.CharField(
@@ -200,7 +200,7 @@ class Player(BasePlayer):
                  ['disagree', 'uenig'],
                  ['strongdisagree', 'meget uenig'],
                  ],
-        verbose_name='Jeg er i stand til at forstå og forudsige de problemstillinger, som opstår i min hverdag.',
+        verbose_name='Jeg er god til at forudse forskellige udfordringer og problemer i mit liv, og forstå deres betydning for mit liv.',
         widget=widgets.RadioSelect()
     )
 
@@ -212,7 +212,7 @@ class Player(BasePlayer):
                  ['disagree', 'uenig'],
                  ['strongdisagree', 'meget uenig'],
                  ],
-        verbose_name='De vil overkomme de udfordringer, som følger af oversvømmelsen.',
+        verbose_name='De vil med stor sandsynlighed overvinde mange af de udfordringer, der opstår i kølvandet på oversvømmelsen.',
         widget=widgets.RadioSelect()
     )
     s42_staycalm = models.CharField(
@@ -222,7 +222,7 @@ class Player(BasePlayer):
                  ['disagree', 'uenig'],
                  ['strongdisagree', 'meget uenig'],
                  ],
-        verbose_name='De vil bevare roen, imens de vil tage stilling til hvad de skal gøre.',
+        verbose_name='De vil stille og roligt vurdere, hvad de skal gøre.',
         widget=widgets.RadioSelect()
     )
     s43_meaning_exp = models.CharField(
@@ -232,7 +232,7 @@ class Player(BasePlayer):
                  ['disagree', 'uenig'],
                  ['strongdisagree', 'meget uenig'],
                  ],
-        verbose_name='De vil finde mening i oplevelsen.',
+        verbose_name='De vil finde en mening med denne oplevelse.',
         widget=widgets.RadioSelect()
     )
 
