@@ -104,7 +104,7 @@ class Player(BasePlayer):
     s18_house_type = models.CharField(
         choices=[['duplex', 'Etagebolig'],
                  ['detached_house', 'Parcelhus'],
-                 ['terraced_house', 'Pækkehus'],
+                 ['terraced_house', 'Rækkehus'],
                  ['others', 'Andet']
                  ],
         verbose_name = 'Hvordan vil du beskrive din boligtype?',
@@ -155,19 +155,19 @@ class Player(BasePlayer):
     )
 
     s22_program_ab = models.CharField(
-        choices=[['progA', 'Scenarie A: 200 mennesker bliver reddet med sikkerhed'],
-                 ['progB', 'Scenarie B: Der er en tredjedel sandsynlighed for, at 600 mennesker bliver reddet, og to tredjedels sandsynlighed for, at ingen mennesker bliver reddet']
+        choices=[['progA', 'Scenarie A: 200 mennesker bliver reddet med sikkerhed, de resterende 400 er for usikkert til at kunne komme med et estimat.'],
+                 ['progB', 'Scenarie B: Der er en tredjedel (33,3%) sandsynlighed for, at 600 mennesker bliver reddet, og to tredjedels (66,6%) sandsynlighed for, at ingen mennesker bliver reddet.']
                  ],
-        verbose_name='Hvilke af de to scenarier vil du foretrække? ',
+        verbose_name='Hvilke af de to forslag vil du foretrække?',
         widget=widgets.RadioSelect()
     )
 
     s23_program_cd = models.CharField(
-        choices=[['progC', 'Scenarie C: 400 mennesker vil omkomme'],
+        choices=[['progC', 'Scenarie C: 400 mennesker vil omkomme med sikkerhed, de resterende 200 er for usikkert til at kunne komme med et estimat.'],
                  ['progD',
-                  'Scenarie D: Der er en tredjedel sandsynlighed for, at ingen mennesker vil omkomme og to tredjedele sandsynlighed for, at  600 mennesker vil omkomme']
+                  'Scenarie D: Der er en tredjedel (33,3%) sandsynlighed for, at ingen mennesker vil omkomme og to tredjedele (66,6%) sandsynlighed for, at 600 mennesker vil omkomme.']
                  ],
-        verbose_name='Hvilke af de to scenarier vil du foretrække? ',
+        verbose_name='Regeringen fremsætter to yderligere scenarier, hvilket vil du foretrække?',
         widget=widgets.RadioSelect()
     )
 
