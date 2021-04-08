@@ -96,7 +96,8 @@ class Player(BasePlayer):
 
     s17_is_flood_risk_zone = models.CharField(
         choices=[['no', 'Nej. Ingen risiko'],
-                 ['yes', 'Ja. Høj risiko']
+                 ['yes_medium', 'Ja. Mellem risiko'],
+                 ['yes_high', 'Ja. Høj risiko']
                  ],
         verbose_name="Er din bolig i en oversvømmelsesrisikozone?",
         widget=widgets.RadioSelect()
