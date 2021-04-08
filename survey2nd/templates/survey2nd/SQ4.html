@@ -1,6 +1,5 @@
 {% extends "global/Page.html" %}
 {% load otree %}
-
 {% block title %}
     <p>
     <img src="{% static 'welcomedk/images/dtu.png' %}"  class="rounded float-left" />
@@ -8,14 +7,46 @@
 </p><br/> <br/>
 {% endblock %}
 
-{% block content %}
 
-<h3>4. PROBLEMHÅNDTERING I FÆLLESSKAB</h3>
+{% block content %}
+<h3>4. RISIKO OPFATTELSE FORBUNDET MED DIVERSE HANDLINGER</h3>
 <hr>
-	Forestil dig at det område du bor i, bliver oversvømmet. Angiv, for hvert udsagn, hvorvidt du er enig i, at de passer til de mennesker der bor i nærområdet.
-{% formfield player.s41_adversity %}
-{% formfield player.s42_staycalm %}
-{% formfield player.s43_meaning_exp %}
+Hvor risikofyldt synes du selv det er at...
+{% formfield player.s41_diff_taste %}
+{% formfield player.s42_camping %}
+{% formfield player.s43_beghorseracing %}
+{% formfield player.s44_investfund %}
+{% formfield player.s45_drinking %}
+{% formfield player.s46_taxdeduction %}
+{% formfield player.s47_disagreeauth %}
+{% formfield player.s48_stakepokergame %}
+{% formfield player.s49_affair %}
+{% formfield player.s410_takecredit %}
+{% formfield player.s411_rundownski %}
+{% formfield player.s412_invest5perincome %}
+{% formfield player.s413_whitewaterrafting %}
+{% formfield player.s414_wageonmatch %}
+{% formfield player.s415_unsupportedsex %}
+{% formfield player.s416_revealsecret %}
+{% formfield player.s417_drivecarnobelt %}
+{% formfield player.s418_investstartup %}
+{% formfield player.s419_learnparachute %}
+{% formfield player.s420_ridemoto %}
+{% formfield player.s421_choosecareer %}
+{% formfield player.s422_sayunpopularcase %}
+{% formfield player.s423_sunbathe %}
+{% formfield player.s424_jumpbungee %}
+{% formfield player.s425_takesmallplane %}
+{% formfield player.s426_gohomealone %}
+{% formfield player.s427_movetofarawaycity %}
+{% formfield player.s428_startnewcareer %}
+{% formfield player.s429_leavekidathome %}
+{% formfield player.s430_keeppurse %}
+{% formfield player.s431_movehouse %}
+{% formfield player.s432_sendkidtoschool %}
+{% formfield player.s433_drivefloodedroad %}
+{% formfield player.s434_parkcar %}
+{% formfield player.s435_hiking %}
 <hr>
 <div class="row">
     <div class="col">

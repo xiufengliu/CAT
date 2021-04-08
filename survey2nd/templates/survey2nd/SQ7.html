@@ -1,5 +1,6 @@
 {% extends "global/Page.html" %}
 {% load otree %}
+
 {% block title %}
     <p>
     <img src="{% static 'welcomedk/images/dtu.png' %}"  class="rounded float-left" />
@@ -7,35 +8,14 @@
 </p><br/> <br/>
 {% endblock %}
 
-
 {% block content %}
-<h3>7. NOGLE UDGSAGN OM DIG</h3>
+
+<h3>7. PROBLEMHÅNDTERING I FÆLLESSKAB</h3>
 <hr>
-Angiv for hvert udsagn, hvorvidt du er enig i, at de passer på dig eller ej.
-{% formfield player.s71_lookpainting %}
-{% formfield player.s72_thingsinplace %}
-{% formfield player.s73_remainunkind %}
-{% formfield player.s74_nobodylikeme %}
-{% formfield player.s75_afraidfeelingpain %}
-{% formfield player.s76_hardtolie %}
-{% formfield player.s77_sciboring %}
-{% formfield player.s78_postponetask %}
-{% formfield player.s79_criticism %}
-{% formfield player.s710_gettouchstranger %}
-{% formfield player.s711_worry %}
-{% formfield player.s712_wondering %}
-{% formfield player.s713_goodimg %}
-{% formfield player.s714_precise %}
-{% formfield player.s715_agreeothers %}
-{% formfield player.s716_talkothers %}
-{% formfield player.s717_overcome %}
-{% formfield player.s718_famous %}
-{% formfield player.s719_lovepeople %}
-{% formfield player.s720_dothings %}
-{% formfield player.s721_staycalm %}
-{% formfield player.s722_wellmanner %}
-{% formfield player.s723_tear %}
-{% formfield player.s724_soap %}
+	Forestil dig at det område du bor i, bliver oversvømmet. Angiv, for hvert udsagn, hvorvidt du er enig i, at de passer til de mennesker der bor i nærområdet.
+{% formfield player.s71_adversity %}
+{% formfield player.s72_staycalm %}
+{% formfield player.s73_meaning_exp %}
 <hr>
 <div class="row">
     <div class="col">
