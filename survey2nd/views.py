@@ -27,137 +27,137 @@ class SQ1(Page):
         's111_likelihood_climent_event',
         's112_degree_or_disagree']
 
-class SQ2(Page):
-    form_model = models.Player
-    form_fields = [
-        's21_prefered_option',
-        's22_program_ab',
-        's23_program_cd'
-        ]
-
-class SQ3(Page):
-    form_model = models.Player
-    form_fields = [
-        's31_findsolution',
-        's32_findvalue',
-        's33_understand_issue'
-    ]
-
-class SQ4(Page):
-    form_model = models.Player
-    form_fields = [
-        's41_adversity',
-        's42_staycalm',
-        's43_meaning_exp'
-    ]
-
 class SQ5(Page):
     form_model = models.Player
     form_fields = [
-        's51_diff_taste',
-        's52_camping',
-        's53_beghorseracing',
-        's54_investfund',
-        's55_drinking',
-        's56_taxdeduction',
-        's57_disagreeauth',
-        's58_stakepokergame',
-        's59_affair',
-        's510_takecredit',
-        's511_rundownski',
-        's512_invest5perincome',
-        's513_whitewaterrafting',
-        's514_wageonmatch',
-        's515_unsupportedsex',
-        's516_revealsecret',
-        's517_drivecarnobelt',
-        's518_investstartup',
-        's519_learnparachute',
-        's520_ridemoto',
-        's521_choosecareer',
-        's522_sayunpopularcase',
-        's523_sunbathe',
-        's524_jumpbungee',
-        's525_takesmallplane',
-        's526_gohomealone',
-        's527_movetofarawaycity',
-        's528_startnewcareer',
-        's529_leavekidathome',
-        's530_keeppurse',
-        's531_movehouse',
-        's532_sendkidtoschool',
-        's533_drivefloodedroad',
-        's534_parkcar',
-        's535_hiking'
-    ]
+        's51_prefered_option',
+        's52_program_ab',
+        's53_program_cd'
+        ]
 
 class SQ6(Page):
     form_model = models.Player
     form_fields = [
-        's61_diff_taste',
-        's62_camping',
-        's63_beghorseracing',
-        's64_investfund',
-        's65_drinking',
-        's66_taxdeduction',
-        's67_disagreeauth',
-        's68_stakepokergame',
-        's69_affair',
-        's610_takecredit',
-        's611_rundownski',
-        's612_invest5perincome',
-        's613_whitewaterrafting',
-        's614_wageonmatch',
-        's615_unsupportedsex',
-        's616_revealsecret',
-        's617_drivecarnobelt',
-        's618_investstartup',
-        's619_learnparachute',
-        's620_ridemoto',
-        's621_choosecareer',
-        's622_sayunpopularcase',
-        's623_sunbathe',
-        's624_jumpbungee',
-        's625_takesmallplane',
-        's626_gohomealone',
-        's627_movetofarawaycity',
-        's628_startnewcareer',
-        's629_leavekidathome',
-        's630_keeppurse',
-        's631_movehouse',
-        's632_sendkidtoschool',
-        's633_drivefloodedroad',
-        's634_parkcar',
-        's635_hiking'
+        's61_findsolution',
+        's62_findvalue',
+        's63_understand_issue'
     ]
 
 class SQ7(Page):
     form_model = models.Player
     form_fields = [
-        's71_lookpainting',
-        's72_thingsinplace',
-        's73_remainunkind',
-        's74_nobodylikeme',
-        's75_afraidfeelingpain',
-        's76_hardtolie',
-        's77_sciboring',
-        's78_postponetask',
-        's79_criticism',
-        's710_gettouchstranger',
-        's711_worry',
-        's712_wondering',
-        's713_goodimg',
-        's714_precise',
-        's715_agreeothers',
-        's716_talkothers',
-        's717_overcome',
-        's718_famous',
-        's719_lovepeople',
-        's720_dothings',
-        's721_staycalm',
-        's722_wellmanner',
-        's723_tear',
-        's724_soap'
+        's71_adversity',
+        's72_staycalm',
+        's73_meaning_exp'
+    ]
+
+class SQ3(Page):
+    form_model = models.Player
+    form_fields = [
+        's31_diff_taste',
+        's32_camping',
+        's33_beghorseracing',
+        's34_investfund',
+        's35_drinking',
+        's36_taxdeduction',
+        's37_disagreeauth',
+        's38_stakepokergame',
+        's39_affair',
+        's310_takecredit',
+        's311_rundownski',
+        's312_invest5perincome',
+        's313_whitewaterrafting',
+        's314_wageonmatch',
+        's315_unsupportedsex',
+        's316_revealsecret',
+        's317_drivecarnobelt',
+        's318_investstartup',
+        's319_learnparachute',
+        's320_ridemoto',
+        's321_choosecareer',
+        's322_sayunpopularcase',
+        's323_sunbathe',
+        's324_jumpbungee',
+        's325_takesmallplane',
+        's326_gohomealone',
+        's327_movetofarawaycity',
+        's328_startnewcareer',
+        's329_leavekidathome',
+        's330_keeppurse',
+        's331_movehouse',
+        's332_sendkidtoschool',
+        's333_drivefloodedroad',
+        's334_parkcar',
+        's335_hiking'
+    ]
+
+class SQ4(Page):
+    form_model = models.Player
+    form_fields = [
+        's41_diff_taste',
+        's42_camping',
+        's43_beghorseracing',
+        's44_investfund',
+        's45_drinking',
+        's46_taxdeduction',
+        's47_disagreeauth',
+        's48_stakepokergame',
+        's49_affair',
+        's410_takecredit',
+        's411_rundownski',
+        's412_invest5perincome',
+        's413_whitewaterrafting',
+        's414_wageonmatch',
+        's415_unsupportedsex',
+        's416_revealsecret',
+        's417_drivecarnobelt',
+        's418_investstartup',
+        's419_learnparachute',
+        's420_ridemoto',
+        's421_choosecareer',
+        's422_sayunpopularcase',
+        's423_sunbathe',
+        's424_jumpbungee',
+        's425_takesmallplane',
+        's426_gohomealone',
+        's427_movetofarawaycity',
+        's428_startnewcareer',
+        's429_leavekidathome',
+        's430_keeppurse',
+        's431_movehouse',
+        's432_sendkidtoschool',
+        's433_drivefloodedroad',
+        's434_parkcar',
+        's435_hiking'
+    ]
+
+class SQ2(Page):
+    form_model = models.Player
+    form_fields = [
+        's21_lookpainting',
+        's22_thingsinplace',
+        's23_remainunkind',
+        's24_nobodylikeme',
+        's25_afraidfeelingpain',
+        's26_hardtolie',
+        's27_sciboring',
+        's28_postponetask',
+        's29_criticism',
+        's210_gettouchstranger',
+        's211_worry',
+        's212_wondering',
+        's213_goodimg',
+        's214_precise',
+        's215_agreeothers',
+        's216_talkothers',
+        's217_overcome',
+        's218_famous',
+        's219_lovepeople',
+        's220_dothings',
+        's221_staycalm',
+        's222_wellmanner',
+        's223_tear',
+        's224_soap'
     ]
 
 class Email(Page):
