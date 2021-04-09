@@ -31,16 +31,18 @@ class SQ7(SurveyPage):
 class Email(SurveyPage):
     pass
 
+class Thanks(Page):
+    pass
 
 survey_pages = [SQ1, SQ2, SQ3, SQ4, SQ5, SQ6, SQ7, Email]
 
 # Common setup for all pages (will set the questions per page)
 setup_survey_pages(models.Player, survey_pages)
 
-page_sequence = [Intro]
+page_sequence = [Intro, SQ1, SQ2, SQ3, SQ4, SQ5, SQ6, SQ7, Email, Thanks]
 
 # add the survey pages to the page sequence list
-page_sequence.extend(survey_pages)
-
+#page_sequence.extend(survey_pages)
+#page_sequence.append(Thanks)
 
 

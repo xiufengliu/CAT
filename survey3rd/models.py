@@ -145,7 +145,7 @@ SURVEY_DEFINITIONS = {
     'SQ2': {
         'page_title': '2. NOGLE UDGSAGN OM DIG',
         'survey_fields': [
-            generate_likert_table(labels=['meget enig', 'enig', 'hverken enig eller uenig', 'uenig', 'meget uenig'],
+            generate_likert_table(labels=['Meget enig', 'Enig', 'Hverken enig eller uenig', 'Uenig', 'Meget uenig'],
                                   choices_values=['strongly agree', 'agree', 'neutral', 'disagree',
                                                   'strongly disagree'],
                                   questions=[
@@ -189,7 +189,7 @@ SURVEY_DEFINITIONS = {
         'page_title': '3. SANDSYNLIGHEDEN FOR, AT UDFØRE DIVERSE HANDLINGER',
         'survey_fields': [
             generate_likert_table(
-                labels=['højst usandsynligt', 'usandsynligt', 'ikke sikkert', 'sandsynligt', 'højst sandsynligt'],
+                labels=['Højst usandsynligt', 'Usandsynligt', 'Ikke sikkert', 'Sandsynligt', 'Højst sandsynligt'],
                 choices_values=['highly unlikely', 'unlikely', 'not certain', 'likely', 'highly likely'],
                 questions=[
                     ('s31_diff_taste', '… indrømme, at du har en anderledes smag end dine venner?'),
@@ -334,9 +334,9 @@ SURVEY_DEFINITIONS = {
                 'text': '<p>Forestil dig, at regeringen forbereder sig på en mulig klimakatastrofe, hvor 600 mennesker forventes at omkomme. Regeringen kommer med to scenarier til at mindske katastrofen. Antag, at de videnskabelige estimater af konsekvenserne er nøjagtige.</p><p>Hvilke af de to forslag vil du foretrække?</p>',
                 'field': models.CharField(
                     choices=[['progA',
-                              'Scenarie A: 200 mennesker bliver reddet med sikkerhed, de resterende 400 er for usikkert til at kunne komme med et estimat.'],
+                              'A: 200 mennesker bliver reddet med sikkerhed, de resterende 400 er for usikkert til at kunne komme med et estimat.'],
                              ['progB',
-                              'Scenarie B: Der er en tredjedel (33,3%) sandsynlighed for, at 600 mennesker bliver reddet, og to tredjedels (66,6%) sandsynlighed for, at ingen mennesker bliver reddet.']
+                              'B: Der er en tredjedel sandsynlighed for, at 600 mennesker bliver reddet, og to tredjedele for, at ingen bliver reddet.']
                              ],
                     widget=widgets.RadioSelect()
                 )
@@ -345,9 +345,9 @@ SURVEY_DEFINITIONS = {
                 'text': 'Regeringen fremsætter to yderligere scenarier, hvilket vil du foretrække?',
                 'field': models.CharField(
                     choices=[['progC',
-                              'Scenarie C: 400 mennesker vil omkomme med sikkerhed, de resterende 200 er for usikkert til at kunne komme med et estimat.'],
+                              'C: 400 mennesker vil omkomme med sikkerhed, de resterende 200 er for usikkert til at kunne komme med et estimat.'],
                              ['progD',
-                              'Scenarie D: Der er en tredjedel (33,3%) sandsynlighed for, at ingen mennesker vil omkomme og to tredjedele (66,6%) sandsynlighed for, at 600 mennesker vil omkomme.']
+                              'D: Der er en tredjedel sandsynlighed for, at ingen mennesker vil omkomme og to tredjedele for, at 600 vil omkomme.']
                              ],
                     widget=widgets.RadioSelect()
                 )
@@ -357,7 +357,7 @@ SURVEY_DEFINITIONS = {
     'SQ6': {
         'page_title': '6. PROBLEMHÅNDTERING',
         'survey_fields': [
-            generate_likert_table(labels=['meget enig', 'enig', 'hverken enig eller uenig', 'uenig', 'meget uenig'],
+            generate_likert_table(labels=['Meget enig', 'Enig', 'Hverken enig eller uenig', 'Uenig', 'Meget uenig'],
                                   choices_values=['strongly agree', 'agree', 'neutral', 'disagree',
                                                   'strongly disagree'],
                                   questions=[
@@ -379,7 +379,7 @@ SURVEY_DEFINITIONS = {
     'SQ7': {
         'page_title': '7. PROBLEMHÅNDTERING I FÆLLESSKAB',
         'survey_fields': [
-            generate_likert_table(labels=['meget enig', 'enig', 'hverken enig eller uenig', 'uenig', 'meget uenig'],
+            generate_likert_table(labels=['Meget enig', 'Enig', 'Hverken enig eller uenig', 'Uenig', 'Meget uenig'],
                                   choices_values=['strongly agree', 'agree', 'neutral', 'disagree',
                                                   'strongly disagree'],
                                   questions=[
