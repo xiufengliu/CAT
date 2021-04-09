@@ -62,7 +62,7 @@ dict(
         real_world_currency_per_point = 0.0125,
         num_demo_participants = 1,
         app_sequence = [
-           'welcomedk', 'controldk',   'survey2nd'
+           'welcomedk', 'controldk',     'survey3rd'
         ],
 )
 ]
@@ -106,4 +106,4 @@ Here are some oTree games.
 
 SECRET_KEY = '#8_on^o3&#i+ajkyobxsv^)a)l896or+o=n)=_5&x!+u&9s^1='
 
-INSTALLED_APPS = ['otree']
+INSTALLED_APPS = ['otree','otreeutils']
